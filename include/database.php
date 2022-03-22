@@ -2,7 +2,7 @@
 $dbHost="localhost";
 $dbUser="root";
 $bdPass="";
-$dbName="db_usp";
+$dbName="usp";
 
 $conn = mysqli_connect($dbHost, $dbUser, $bdPass, $dbName);
 

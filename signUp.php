@@ -40,6 +40,18 @@ require_once 'include/database.php'
                             <input name="username" type="text" class="input"><br>
                             <label for="password">Password:</label><br>
                             <input name="password" type="text" class="input"><br>
+                            <label for="email">Email:</label><br>
+                            <input name="email" type="email" class="input"><br>
+                            <label for="secondEmail">Backup Email:</label><br>
+                            <input name="secondEmail" type="email" class="input"><br>
+                            <label for="firstName">First Name:</label><br>
+                            <input name="firstName" type="text" class="input"><br>
+                            <label for="lastName">Last Name:</label><br>
+                            <input name="lastName" type="text" class="input"><br>
+                            <label for="phoneNumber">Phone Number:</label><br>
+                            <input name="phoneNumber" type="text" class="input"><br>
+                            <label for="dateOfBirth">Date Of Birth:</label><br>
+                            <input name="dateOfBirth" type="date" class="input"><br>
                             <input type="submit" value="Login" name="submit">
                     </form>
                 </div>
@@ -48,8 +60,15 @@ require_once 'include/database.php'
                 if(isset( $_POST['submit'] )) {
                     $username = $_REQUEST['username'];
                     $password = $_REQUEST['password'];
+                    $email = $_REQUEST['email'];
+                    $secondEmail = $_REQUEST['secondEmail'];
+                    $firstName = $_REQUEST['firstName'];
+                    $lastName = $_REQUEST['lastName'];
+                    $phoneNumber = $_REQUEST['phoneNumber'];
+                    $dateOfBirth = $_REQUEST['dateOfBirth'];
                     $out = '<p>Hello '.$username;
-                    $out .= '<p>Your password is '.$password; 
+                    $out .= '<p>Your password is '.$password;
+                    $out .= '{$email}, {$secondEmail}, {.$firstName}, {.$lastName}, {.$phoneNumber}, {.$dateOfBirth}';
                     echo($out);
                 }
                 ?>

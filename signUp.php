@@ -1,7 +1,6 @@
 <?php
-require_once 'include/database.php'
+    include_once "include/signUp-inc.php"
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,7 +34,7 @@ require_once 'include/database.php'
                 <h1>Sign up</h1>
 
                 <div id="signUpContainer">
-                    <form action="signUp.php" method="post">
+                    <form action="include/signUp-inc.php" method="post">
                             <label for="username">Username:</label><br>
                             <input name="username" type="text" class="input"><br>
                             <label for="password">Password:</label><br>
@@ -55,23 +54,6 @@ require_once 'include/database.php'
                             <input type="submit" value="Login" name="submit">
                     </form>
                 </div>
-
-                <?php
-                if(isset( $_POST['submit'] )) {
-                    $username = $_REQUEST['username'];
-                    $password = $_REQUEST['password'];
-                    $email = $_REQUEST['email'];
-                    $secondEmail = $_REQUEST['secondEmail'];
-                    $firstName = $_REQUEST['firstName'];
-                    $lastName = $_REQUEST['lastName'];
-                    $phoneNumber = $_REQUEST['phoneNumber'];
-                    $dateOfBirth = $_REQUEST['dateOfBirth'];
-                    $out = '<p>Hello '.$username;
-                    $out .= '<p>Your password is '.$password;
-                    $out .= '{$email}, {$secondEmail}, {.$firstName}, {.$lastName}, {.$phoneNumber}, {.$dateOfBirth}';
-                    echo($out);
-                }
-                ?>
 
             </section>
         </div>

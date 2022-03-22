@@ -6,9 +6,7 @@ $dbName="usp";
 
 $conn = mysqli_connect($dbHost, $dbUser, $bdPass, $dbName);
 
-if ($conn) {
-    # code...
-} else {
+if (!$conn) {
     die("Database connection failed!");
 }
 

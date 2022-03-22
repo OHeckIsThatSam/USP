@@ -35,7 +35,7 @@
             <section>
                 <h1 class="Log">Login Form</h1> <br> <br>
                 <div id="loginContainer">
-                    <form action="login.php" method="post">
+                    <form action="include/login-inc.php" method="post">
                         <label for="username">Username:</label><br>
                         <input name="username" type="text" class="input"><br>
                         <label for="password">Password:</label><br>

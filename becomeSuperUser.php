@@ -43,7 +43,7 @@ require_once 'include/database.php'
                 <a href="#">Contact/Find Us</a>
             </div>
             <div>
-                <p id="copyright">Copyright &copy; of USP 2021</p>  
+                <p id="copyright">Copyright &copy; of USP <script>document.write(new Date().getFullYear())</script></p>  
             </div>
         </footer>
     </div>

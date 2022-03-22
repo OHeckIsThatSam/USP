@@ -35,6 +35,9 @@
                 <h1>Search People</h1>
             </section>
         </div>
+        <div class="topnav">
+            <input type="text" placeholder="Search..">
+        </div>
 
         <footer>
             <div>

@@ -81,3 +81,7 @@ input[type="submit"] {
   font-size: 30px;
   cursor: pointer;
 }
+/*--------------- search people page ----------------*/
+.topnav {
+  text-align: center;
+}

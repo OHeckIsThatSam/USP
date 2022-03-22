@@ -49,6 +49,8 @@
                             <input name="lastName" type="text" class="input"><br>
                             <label for="phoneNumber">Phone Number:</label><br>
                             <input name="phoneNumber" type="text" class="input"><br>
+                            <label for="address">Address:</label><br>
+                            <input name="address" type="text" class="input"><br>
                             <label for="dateOfBirth">Date Of Birth:</label><br>
                             <input name="dateOfBirth" type="date" class="input"><br>
                             <input type="submit" value="Login" name="submit">

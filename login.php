@@ -1,6 +1,4 @@
-<?php
-require_once 'include/database.php'
-?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -8,7 +6,9 @@ require_once 'include/database.php'
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="stylesheet" href="css/mobile.css">
     <link rel="stylesheet" media="only screen and (min-width:720px)" href="css/desktop.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 
 <body>
@@ -40,17 +40,17 @@ require_once 'include/database.php'
                         <label for="password">Password:</label><br>
                         <input name="password" type="text" class="input"><br>
                         <input type="submit" value="Login" name="submit">
-                    </form>
-                    <a href="signUp.php">Not got an account? Click here to sign up.</a>
-                <div>
+                    </form> <br>
+                    <a href="signUp.php">Not got an account? Click here to sign up.</a> 
+                <div> <br> <br>
 
                 <?php
                 if(isset( $_POST['submit'] )) {
                     $username = $_REQUEST['username'];
                     $password = $_REQUEST['password'];
                     $out = '<p>Hello '.$username;
-                    $out .= '<p>Your password is '.$password; 
-                    echo($out);
+                    // $out .= '<p>Your password is '.$password; 
+                    // echo($out);
                 }
                 ?>
                 

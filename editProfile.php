@@ -1,6 +1,4 @@
-<?php
-require_once 'include/database.php'
-?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -8,7 +6,9 @@ require_once 'include/database.php'
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Profile</title>
+    <link rel="stylesheet" href="css/mobile.css">
     <link rel="stylesheet" media="only screen and (min-width:720px)" href="css/desktop.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 
 <body>

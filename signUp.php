@@ -1,7 +1,6 @@
 <?php
-require_once 'include/database.php'
+    include_once "include/signUp-inc.php"
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,24 +36,28 @@ require_once 'include/database.php'
                 <h1>Sign up</h1>
 
                 <div id="signUpContainer">
-                    <form action="signUp.php" method="post">
+                    <form action="include/signUp-inc.php" method="post">
                             <label for="username">Username:</label><br>
                             <input name="username" type="text" class="input"><br>
                             <label for="password">Password:</label><br>
                             <input name="password" type="text" class="input"><br>
+                            <label for="email">Email:</label><br>
+                            <input name="email" type="email" class="input"><br>
+                            <label for="secondEmail">Backup Email:</label><br>
+                            <input name="secondEmail" type="email" class="input"><br>
+                            <label for="firstName">First Name:</label><br>
+                            <input name="firstName" type="text" class="input"><br>
+                            <label for="lastName">Last Name:</label><br>
+                            <input name="lastName" type="text" class="input"><br>
+                            <label for="phoneNumber">Phone Number:</label><br>
+                            <input name="phoneNumber" type="text" class="input"><br>
+                            <label for="address">Address:</label><br>
+                            <input name="address" type="text" class="input"><br>
+                            <label for="dateOfBirth">Date Of Birth:</label><br>
+                            <input name="dateOfBirth" type="date" class="input"><br>
                             <input type="submit" value="Login" name="submit">
                     </form>
                 </div>
-
-                <?php
-                if(isset( $_POST['submit'] )) {
-                    $username = $_REQUEST['username'];
-                    $password = $_REQUEST['password'];
-                    $out = '<p>Hello '.$username;
-                    $out .= '<p>Your password is '.$password; 
-                    echo($out);
-                }
-                ?>
 
             </section>
         </div>

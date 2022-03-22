@@ -4,11 +4,13 @@
    #607EA6
    #012840
    #F28F79 */
-
+body {
+  background-color: #e9eff1;
+}
 footer {
   background-color: #c8dbe2;
   padding: 10px 23px;
-  color: rgb(0, 0, 0);
+  color: #000000;
   text-align: center;
   font-style: italic;
   /* margin: 20px 10px 10px 0; */

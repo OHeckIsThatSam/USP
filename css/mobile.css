@@ -1,7 +1,14 @@
+header {
+  /* display: flex; */
+  background-color: #c8dbe2;
+}
+body {
+  background-color: #e9eff1;
+}
 footer {
-  background-color: black;
+  background-color: #c8dbe2;
   padding: 10px 23px;
-  color: #fff;
+  color: #000;
   text-align: center;
   font-style: italic;
   margin-top: 10px;

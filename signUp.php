@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/mobile.css">
     <link rel="stylesheet" media="only screen and (min-width:720px)" href="css/desktop.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="shortcut icon" href="images/logoBlack.png" type="image/x-icon" />
 </head>
 
 <body>
@@ -67,7 +68,7 @@
                 <a href="#">Contact/Find Us</a>
             </div>
             <div>
-                <p id="copyright">Copyright &copy; of USP 2021</p>  
+                <p id="copyright">Copyright &copy; of USP <script>document.write(new Date().getFullYear())</script></p>  
             </div>
         </footer>
     </div>

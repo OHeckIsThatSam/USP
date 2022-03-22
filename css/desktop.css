@@ -5,96 +5,103 @@
    #012840
    #F28F79 */
 
-footer{
-    background: #111;
-    padding: 15px 23px;
-    color: #fff;
-    text-align: center;
-    font-style: italic;
-    margin-top: 160px;
+footer {
+  background-color: red;
+  padding: 10px 23px;
+  color: #fff;
+  text-align: center;
+  font-style: italic;
+  /* margin: 20px 10px 10px 0; */
 }
-header{
-    display: flex;
+header {
+  display: flex;
+  background-color: #c8dbe2;
 }
-
 /*--------------- Navagation -----------------*/
-nav{
-    margin: auto auto auto 20px;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
+nav {
+  margin: auto auto auto 20px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
 }
-nav ul{
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    padding: 0px;
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  padding: 0px;
 }
-nav ul li{
-    padding: 0px;
-    border-bottom: none;
+nav ul li {
+  padding: 0px;
+  border-bottom: none;
 }
-nav ul li a{
-    float: left;
-    display: block;
-    color: black;
-    text-align: center;
-    padding: 14px;
-    text-decoration: none;
-    font-size: 20px;
-    width: auto;
+nav ul li a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+  font-size: 20px;
+  width: auto;
 }
 /*--------------- Login page -----------------*/
-input[type="text"]{
-    width: 25%;
-    outline: none;
-    font-size: 15px;
-    border: 1px solid #a8a8a8;
-    border-radius: 4px;
-    transition: all 0.3s ease;
-    height: 25px;
-    margin-bottom: 15px;
+input[type="text"] {
+  width: 25%;
+  outline: none;
+  font-size: 15px;
+  border: 1px solid #a8a8a8;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  height: 25px;
+  margin-bottom: 15px;
 }
-input[type="submit"]{
-    background-color: grey;
-    color: white;
-    cursor: pointer;
-    text-align: center;
-    border: 2px solid black;
-    width: 20%;
-    margin: auto;
-    font-weight: bolder;
-    font-size: 25px;
-    cursor: pointer;
-    display: block;
-    padding-right: 20px;
-    text-decoration: none;
-    margin-top: 20px;
+input[type="submit"] {
+  background-color: grey;
+  color: white;
+  cursor: pointer;
+  text-align: center;
+  border: 2px solid black;
+  width: 20%;
+  margin: auto;
+  font-weight: bolder;
+  font-size: 25px;
+  cursor: pointer;
+  display: block;
+  padding-right: 20px;
+  text-decoration: none;
+  margin-top: 20px;
 }
-#loginContainer, #signUpContainer{
-    text-align: center;
+#loginContainer,
+#signUpContainer {
+  text-align: center;
 }
-.Log{
-    position: relative;
-    text-align: center;
-    border: 2px solid black;
-    width: 45%;
-    margin: auto;
-    background-color: #02b4fa;
-    font-weight: bolder;
-    font-size: 30px;
-    cursor: pointer;
+.Log {
+  position: relative;
+  text-align: center;
+  border: 2px solid black;
+  width: 45%;
+  margin: auto;
+  background-color: #02b4fa;
+  font-weight: bolder;
+  font-size: 30px;
+  cursor: pointer;
 }
-label{
-    margin-left: -19.5%;
-}
-
-body{
-    margin: 0;
+label {
+  margin-left: -19.5%;
 }
 
-
-
-/* img{
-    padding: 5px;
-} */
+body {
+  margin: 0;
+}
+/*----------------- index page ----------------*/
+img {
+  padding: 5px;
+  width: 90%;
+}
+h1 {
+  text-align: center;
+}
+/*--------------- search people page ----------------*/
+.topnav {
+  text-align: center;
+}

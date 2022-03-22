@@ -1,3 +1,10 @@
+header {
+  /* display: flex; */
+  background-color: #c8dbe2;
+}
+body {
+  background-color: #e9eff1;
+}
 footer {
   background-color: #c8dbe2;
   padding: 10px 23px;

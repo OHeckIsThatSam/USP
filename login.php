@@ -29,7 +29,7 @@
                     </ul>
                 </nav>
             </header>
-        </div>
+        </div> <br>
         <div id="content">
             <section>
                 <h1 class="Log">Login Form</h1> <br> <br>

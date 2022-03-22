@@ -1,0 +1,1 @@
+{/* <p class="copy"> &copy; <script>document.write(new Date().getFullYear())</script></p>  */}

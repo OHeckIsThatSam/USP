@@ -35,7 +35,7 @@
                 <h1>Home</h1>
             </section>
         </div>
-
+        <img class="slideshow" name="slideshow"  alt="slideshow of photos "width="500" height="400"  />
         <footer>
             <div>
                 <a href="#">Contact/Find Us</a>

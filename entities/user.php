@@ -15,6 +15,21 @@ class User {
     private $description;
     private $reported;
 
+    public function fillByRow(array $row) {
+        $this -> setId($row['id']);
+        $this -> setUsername($row['username']);
+        $this -> setPassword($row['password']);
+        $this -> setEmail($row['email']);
+        $this -> setSecondEmail($row['secondEmail']);
+        $this -> setFirstName($row['firstName']);
+        $this -> setLastName($row['lastName']);
+        $this -> setPhoneNumber($row['phoneNumber']);
+        $this -> setAddress($row['address']);
+        $this -> setDateOfBirth($row['dateOfBirth']);
+        $this -> setDescription($row['description']);
+        $this -> setReported($row['reported']);
+    }
+
     public function getId() {
         return $this->id;
     }
@@ -88,7 +103,7 @@ class User {
     }
 
     public function getDateOfBirth() {
-        return $this->DateOfBirth;
+        return $this->dateOfBirth;
     }
 
     public function setDateOfBirth($dateOfBirth) {

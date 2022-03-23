@@ -44,16 +44,6 @@
                     </form> <br>
                     <a href="signUp.php">Not got an account? Click here to sign up.</a> 
                 <div> <br> <br>
-
-                <?php
-                if(isset( $_POST['submit'] )) {
-                    $username = $_REQUEST['username'];
-                    $password = $_REQUEST['password'];
-                    $out = '<p>Hello '.$username;
-                    // $out .= '<p>Your password is '.$password; 
-                    // echo($out);
-                }
-                ?>
                 
             </section>
         </div>

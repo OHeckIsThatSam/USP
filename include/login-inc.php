@@ -2,41 +2,29 @@
 
 if(isset( $_POST['submit'] )) {
     require 'database.php';
-    require_once 'entities\user.php';
-    $user = new User();
-    $user -> setUsername($_POST['username']);
-    $user -> setPassword($_POST['password']);
-
-    echo($user -> getUsername());
-
-    exit();
-
+    require_once '../entities/user.php';
+    require_once '../models/userModel.php';
+    $userModel = new UserModel();
+    
+    // Get username and password from http header
     $username = $_POST['username'];
     $password = $_POST['password'];
 
+    // Check if ethier values are null
     if(empty($username) || empty($password)) {
-        header("Location: ../login.php&error=PleaseFillOutAllFields");
+        header("Location: ../login.php?error=PleaseFillOutAllFields");
         exit();
     }
 
-    $query = "SELECT username FROM user WHERE username = ?";
-    $stmt = mysqli_stmt_init($conn);
+    $user = $userModel -> loginDetailsCorrect($username, $password);
 
-    if(!mysqli_stmt_prepare($stmt, $query)){
-        header("Location: ../login.php&error=sqlError");
+    if(empty($user)) {
+        header("Location: ../login.php?error=UsernameOrPasswordIncorrect");
         exit();
     }
 
-    mysqli_stmt_bind_param($stmt, "s", $username);
-    mysqli_stmt_execute($stmt);
-
-    $rowCount = mysqli_num_rows($stmt);
-    if($rowCount == 0) {
-        header("Location: ../login.php&error=UsernameOrPasswordIncorrect");
-        exit();
-    }
-
-    while ($row = mysqli_fetch_assoc($result)) {
-        
-    }
+    session_start();
+    $_SESSION['user'] = $user;
+    header("Location: ../home.php?");
+    exit();
 }

@@ -40,10 +40,10 @@
                     Suspendisse lobortis neque dui, quis tempor nisi vulputate eget. Integer at nisl eget ligula luctus sodales. 
                     Nam ac ex luctus, auctor arcu id, pulvinar purus.
                 </div>
-                <div>
-                    test
-                </div>
             </section>
+        </div>
+        <div class="con">
+            <img class="slideshow" name="slideshow"  alt="slideshow of photos "width="500" height="400"  />
         </div>
         <footer>
             <div>
@@ -54,5 +54,6 @@
             </div>
         </footer>
     </div>
+    <script src="JS/main.js"></script>
 </body>
 </html>

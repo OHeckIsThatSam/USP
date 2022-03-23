@@ -128,3 +128,13 @@ input[name="dateOfBirth"] {
   transition: all 0.3s ease;
   height: 25px;
 }
+/*---------- home page slideshow/ home page -----------------*/
+.slideshow {
+  width: 50%;
+  border-radius: 25%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 5px solid #555;
+  margin-bottom: 15px;
+}

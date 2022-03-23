@@ -56,9 +56,9 @@
                             <input name="address" type="text" class="input"><br>
                             <label for="dateOfBirth">Date Of Birth:</label><br>
                             <input name="dateOfBirth" type="date" class="input"><br>
-                            <input type="submit" value="Login" name="submit">
+                            <input type="submit" value="SignUp" name="submit">
                     </form>
-                </div>
+                </div> <br> <br>
 
             </section>
         </div>

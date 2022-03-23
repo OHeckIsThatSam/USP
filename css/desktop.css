@@ -138,3 +138,7 @@ input[name="dateOfBirth"] {
   border: 5px solid #555;
   margin-bottom: 15px;
 }
+.slideshow:hover {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}

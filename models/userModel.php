@@ -14,18 +14,17 @@ class UserModel {
         $stmt->execute();
     }
 
-    public function getUserById($id){
+    public function findById($id){
         require_once '../entities/user.php';
         require '../include/database.php';
 
-        $query = "SELECT id, username, password, email, secondEmail, firstName, lastName, phoneNumber, address, dateOfBirth, description, reported
-        FROM user WHERE id = ?";
+        $query = "SELECT * FROM user WHERE id = ?";
     
         $stmt = $conn->prepare($query);
         $stmt->bind_param("i", $id);
         $stmt->execute();
-        $result = $stmt->get_result();
 
+        $result = $stmt->get_result();
         $row = $result->fetch_assoc();
     
         $user = new User();
@@ -64,7 +63,7 @@ class UserModel {
             return;
         }
 
-        $user = $this -> getUserById($row['id']);
+        $user = $this -> findById($row['id']);
         return $user;
     }
 }

@@ -35,6 +35,9 @@
                 <h1>Home</h1>
             </section>
         </div>
+        <div class="con">
+            <img class="slideshow" name="slideshow"  alt="slideshow of photos "width="500" height="400"  />
+        </div>
         <footer>
             <div>
                 <a href="#">Contact/Find Us</a>

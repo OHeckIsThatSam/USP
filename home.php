@@ -17,7 +17,7 @@
             <header>
                 <div class="logoContainer">
                     <img alt="logo" src="images/logoBlack.png">
-                </div> <br>
+                </div>
                 <nav>
                     <ul>
                         <li><a href="home.php">Home</a></li>

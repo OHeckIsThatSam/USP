@@ -1,4 +1,6 @@
-
+<?php
+session_start();
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -26,7 +28,10 @@
                         <li><a href="conversations.php">Conversations</a></li>
                         <li><a href="viewProfile.php">Profile</a></li>
                         <li><a href="adminDashboard.php">Admin Dashboard</a></li>
-                        <li><a href="login.php">Login</a></li>
+                        <?php 
+                        if(!is_null($_SESSION['user'])) {
+                            echo('<li><a href="login.php">Login</a></li>');
+                        } ?>
                     </ul>
                 </nav>
             </header>

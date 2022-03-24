@@ -1,5 +1,6 @@
 <?php
-    include_once "include/signUp-inc.php"
+    include_once "include/signUp-inc.php";
+    include_once "include/tagModel.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -56,6 +57,11 @@
                             <input name="address" type="text" class="input"><br>
                             <label for="dateOfBirth">Date Of Birth:</label><br>
                             <input name="dateOfBirth" type="date" class="input"><br>
+                            <label for="tags">Choose Your Tags:</label>
+                            <select name="cars" id="cars">
+                            <?php
+                            
+                            ?>
                             <input type="submit" value="SignUp" name="submit">
                     </form>
                 </div> <br> <br>

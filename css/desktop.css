@@ -131,14 +131,8 @@ input[name="dateOfBirth"] {
 /*---------- home page slideshow/ home page -----------------*/
 .slideshow {
   width: 50%;
-  border-radius: 25%;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  border: 5px solid #555;
   margin-bottom: 15px;
-}
-.slideshow:hover {
-  -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
 }

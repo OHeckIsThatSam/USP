@@ -46,6 +46,7 @@
                             <input name="username" type="text" class="input"><br>
                             <label for="password">Password:</label><br>
                             <input type="password" value=""id="myInput" class="inputpass"><br><br>
+                            <input type="checkbox" onclick="password()">Show Password<br><br>
                             <label for="email">Email:</label><br>
                             <input name="email" type="email" class="input"><br>
                             <label for="secondEmail">Backup Email:</label><br>

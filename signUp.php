@@ -40,13 +40,10 @@
         <div id="content">
             <section>
                 <h1>Sign up</h1>
-
                 <div id="signUpContainer">
                     <form action="include/signUp-inc.php" method="post">
                             <label for="username">Username:</label><br>
                             <input name="username" type="text" class="input"><br>
-                            <label for="password">Password:</label><br>
-                            <input name="password" type="text" class="input"><br>
                             <label for="email">Email:</label><br>
                             <input name="email" type="email" class="input"><br>
                             <label for="secondEmail">Backup Email:</label><br>
@@ -59,15 +56,26 @@
                             <input name="phoneNumber" type="text" class="input"><br>
                             <label for="address">Address:</label><br>
                             <input name="address" type="text" class="input"><br>
+                            <label for="password">Password:</label><br>
+                            <input type="password" value=""id="passinput" class="inputpass"><br><br>
                             <label for="dateOfBirth">Date Of Birth:</label><br>
                             <input name="dateOfBirth" type="date" class="input"><br>
-                            <input type="submit" value="SignUp" name="submit">
+                            <input type="checkbox" onclick="password()">Show Password<br><br>
+                            <input type="submit" value="SignUp" name="submit"> <br>
                     </form>
-                </div> <br> <br>
-
+                </div>
             </section>
         </div>
-    
+        <script>
+            function password() {
+             var i = document.getElementById("passinput");
+            if (i.type === "password") {
+              i.type = "text";
+             } else {
+                 i.type = "password";
+                    }
+            }
+        </script>
         <footer>
             <div>
                 <a href="#">Contact/Find Us</a>
@@ -78,4 +86,4 @@
         </footer>
     </div>
 </body>
-</html>
+</html> 

@@ -6,14 +6,16 @@
     <title>Home</title>
     <link rel="stylesheet" href="css/mobile.css">
     <link rel="stylesheet" media="only screen and (min-width:720px)" href="css/desktop.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> -->
     <link rel="shortcut icon" href="images/logoBlack.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
     <div id="pageContainer">
         <div class="container">
             <header>
+
                 <div class="logoContainer">
                     <img alt="logo" src="images/logoBlack.png">
                 </div> <br>
@@ -27,14 +29,17 @@
                         <li><a href="login.php">Login</a></li>
                     </ul>
                 </nav>
+                <div class="ic">
+                <i class="fa fa-comments-o" style="font-size:35px"></i>
+                <i class="fa fa-user-circle" style="font-size:35px"></i>
+                <i class="fa fa-user-times" style="font-size:35px"></i>
+                </div>
             </header>
         </div>
         <div id="content">
             <section>
                 <h1>Welcome</h1>
-                <div class="Icons">
-                        <i class="fa fa-comments-o" style="font-size:24px"></i>
-                    </div>
+                
                 <div>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor neque odio, consequat tincidunt augue lobortis vel. 
                     Curabitur quis metus mauris. Donec urna nunc, ornare quis ullamcorper quis, ultricies sed justo. 

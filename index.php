@@ -32,6 +32,9 @@
         <div id="content">
             <section>
                 <h1>Welcome</h1>
+                <div class="Icons">
+                        <i class="fa fa-comments-o" style="font-size:24px"></i>
+                    </div>
                 <div>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor neque odio, consequat tincidunt augue lobortis vel. 
                     Curabitur quis metus mauris. Donec urna nunc, ornare quis ullamcorper quis, ultricies sed justo. 
@@ -40,10 +43,10 @@
                     Suspendisse lobortis neque dui, quis tempor nisi vulputate eget. Integer at nisl eget ligula luctus sodales. 
                     Nam ac ex luctus, auctor arcu id, pulvinar purus.
                 </div>
-                <div>
-                    test
-                </div>
             </section>
+        </div>
+        <div class="con">
+            <img class="slideshow" name="slideshow"  alt="slideshow of photos "width="500" height="400"  />
         </div>
         <footer>
             <div>
@@ -54,5 +57,6 @@
             </div>
         </footer>
     </div>
+    <script src="JS/main.js"></script>
 </body>
 </html>

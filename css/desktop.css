@@ -88,9 +88,9 @@ input[type="submit"] {
   font-size: 30px;
   cursor: pointer;
 }
-label {
+/* label {
   margin-left: -19.5%;
-}
+} */
 
 body {
   margin: 0;
@@ -106,4 +106,39 @@ h1 {
 /*--------------- search people page ----------------*/
 .topnav {
   text-align: center;
+}
+/*---------------- sign up page -------------------*/
+input[name="email"],
+input[name="secondEmail"] {
+  width: 25%;
+  outline: none;
+  font-size: 15px;
+  border: 1px solid #a8a8a8;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  height: 25px;
+  margin-bottom: 15px;
+}
+input[name="dateOfBirth"] {
+  width: 13%;
+  outline: none;
+  font-size: 15px;
+  border: 1px solid #a8a8a8;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  height: 25px;
+}
+/*---------- home page slideshow/ home page -----------------*/
+.slideshow {
+  width: 50%;
+  border-radius: 25%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 5px solid #555;
+  margin-bottom: 15px;
+}
+.slideshow:hover {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
 }

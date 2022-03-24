@@ -62,7 +62,7 @@ input[type="submit"] {
   cursor: pointer;
   text-align: center;
   border: 2px solid black;
-  width: 23%;
+  width: 65%;
   margin: auto;
   font-weight: bolder;
   font-size: 25px;
@@ -90,4 +90,25 @@ input[type="submit"] {
 /*--------------- search people page ----------------*/
 .topnav {
   text-align: center;
+}
+/*----------------- sign up page --------------------*/
+input[name="email"],
+input[name="secondEmail"] {
+  width: 100%;
+  outline: none;
+  font-size: 15px;
+  border: 1px solid #a8a8a8;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  height: 25px;
+  margin-bottom: 15px;
+}
+.slideshow {
+  width: 100%;
+  border-radius: 25%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 5px solid #555;
+  margin-bottom: 15px;
 }

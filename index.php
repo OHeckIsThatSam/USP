@@ -32,6 +32,9 @@
         <div id="content">
             <section>
                 <h1>Welcome</h1>
+                <div class="Icons">
+                        <i class="fa fa-comments-o" style="font-size:24px"></i>
+                    </div>
                 <div>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor neque odio, consequat tincidunt augue lobortis vel. 
                     Curabitur quis metus mauris. Donec urna nunc, ornare quis ullamcorper quis, ultricies sed justo. 

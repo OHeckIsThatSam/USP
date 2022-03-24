@@ -19,6 +19,6 @@ if(isset( $_POST['submit'] )) {
 
     $userModel -> create($user);
 
-    header("Location: ../login.php?");
+    header("Location: ../login.php");
     exit();
 }

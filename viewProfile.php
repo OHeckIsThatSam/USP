@@ -1,4 +1,13 @@
+<?php
+require_once 'entities/user.php';
+session_start();
 
+if(is_null($_SESSION['user'])) {
+    header("Location: login.php");
+    exit();
+}
+$user = $_SESSION['user'];
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -34,6 +43,15 @@
         <div id="content">
             <section>
                 <h1>View Profile</h1>
+                <h2>Your details</h2>
+                <div>
+                    <ul>
+                        <li>First name: <?php echo($user->getFirstName());?></li>
+                        <li>Last name: <?php echo($user->getLastName());?></li>
+                        <li>Email: <?php echo($user->getEmail());?></li>
+                        <li>Back up email: <?php echo($user->getSecondEmail());?></li>
+                    </ul>
+                </div>
             </section>
         </div>
 

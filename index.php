@@ -17,7 +17,9 @@
             <header>
 
                 <div class="logoContainer">
-                    <img alt="logo" src="images/logoBlack.png">
+                <a href="index.php">
+                    <img alt="logo" src="images/logoBlack.png"> 
+                </a>
                 </div> <br>
                 <nav>
                     <ul>

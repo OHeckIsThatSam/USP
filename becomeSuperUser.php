@@ -13,15 +13,15 @@ require_once 'include/database.php'
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="shortcut icon" href="images/logoBlack.png" type="image/x-icon" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-
-<body>
+    <body>
     <div id="pageContainer">
         <div class="container">
             <header>
 
                 <div class="logoContainer">
-                    <img alt="logo" src="images/logoBlack.png">
+                <a href="index.php">
+                    <img alt="logo" src="images/logoBlack.png"> 
+                </a>
                 </div> <br>
                 <nav>
                     <ul>

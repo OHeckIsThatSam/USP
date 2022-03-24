@@ -44,9 +44,6 @@
                     <form action="include/signUp-inc.php" method="post">
                             <label for="username">Username:</label><br>
                             <input name="username" type="text" class="input"><br>
-                            <label for="password">Password:</label><br>
-                            <input type="password" value=""id="myInput" class="inputpass"><br><br>
-                            <input type="checkbox" onclick="password()">Show Password<br><br>
                             <label for="email">Email:</label><br>
                             <input name="email" type="email" class="input"><br>
                             <label for="secondEmail">Backup Email:</label><br>
@@ -59,20 +56,23 @@
                             <input name="phoneNumber" type="text" class="input"><br>
                             <label for="address">Address:</label><br>
                             <input name="address" type="text" class="input"><br>
+                            <label for="password">Password:</label><br>
+                            <input type="password" value=""id="passinput" class="inputpass"><br><br>
                             <label for="dateOfBirth">Date Of Birth:</label><br>
                             <input name="dateOfBirth" type="date" class="input"><br>
-                            <input type="submit" value="SignUp" name="submit">
+                            <input type="checkbox" onclick="password()">Show Password<br><br>
+                            <input type="submit" value="SignUp" name="submit"> <br>
                     </form>
                 </div>
             </section>
         </div>
         <script>
             function password() {
-             var x = document.getElementById("myInput");
-            if (x.type === "password") {
-              x.type = "text";
+             var i = document.getElementById("passinput");
+            if (i.type === "password") {
+              i.type = "text";
              } else {
-                 x.type = "password";
+                 i.type = "password";
                     }
             }
         </script>

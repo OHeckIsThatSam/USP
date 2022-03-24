@@ -1,6 +1,6 @@
 var i = 0; 
 var image = [];
-var time = 3000;
+var time = 4000;
 	 
 image[0] = "images/pexels-thirdman-7257937.jpg";
 image[1] = "images/pexels-vanessa-garcia-6325959.jpg";

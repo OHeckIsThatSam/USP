@@ -136,7 +136,7 @@ input[name="dateOfBirth"] {
   margin-right: auto;
   margin-bottom: 15px;
 }
-.ic {
+/* .ic {
   margin-left: auto;
   padding-right: 25px;
   padding-top: 4px;
@@ -151,4 +151,8 @@ input[name="dateOfBirth"] {
 .fa-comments-o {
   color: #000000;
   padding-right: 25px;
+} */
+/*----------- sign up process 1 -----------------*/
+#signUpprocess {
+  text-align: center;
 }

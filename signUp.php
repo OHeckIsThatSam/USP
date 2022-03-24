@@ -40,13 +40,12 @@
         <div id="content">
             <section>
                 <h1>Sign up</h1>
-
                 <div id="signUpContainer">
                     <form action="include/signUp-inc.php" method="post">
                             <label for="username">Username:</label><br>
                             <input name="username" type="text" class="input"><br>
                             <label for="password">Password:</label><br>
-                            <input name="password" type="text" class="input"><br>
+                            <input type="password" value=""id="myInput" class="inputpass"><br><br>
                             <label for="email">Email:</label><br>
                             <input name="email" type="email" class="input"><br>
                             <label for="secondEmail">Backup Email:</label><br>
@@ -63,11 +62,9 @@
                             <input name="dateOfBirth" type="date" class="input"><br>
                             <input type="submit" value="SignUp" name="submit">
                     </form>
-                </div> <br> <br>
-
+                </div>
             </section>
         </div>
-    
         <footer>
             <div>
                 <a href="#">Contact/Find Us</a>
@@ -78,4 +75,4 @@
         </footer>
     </div>
 </body>
-</html>
+</html> 

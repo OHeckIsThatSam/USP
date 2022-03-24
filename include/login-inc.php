@@ -12,19 +12,19 @@ if(isset( $_POST['submit'] )) {
 
     // Check if ethier values are null
     if(empty($username) || empty($password)) {
-        header("Location: ../login.php?error=PleaseFillOutAllFields");
+        header("Location: ../login.php&error=PleaseFillOutAllFields");
         exit();
     }
 
     $user = $userModel -> loginDetailsCorrect($username, $password);
 
     if(empty($user)) {
-        header("Location: ../login.php?error=UsernameOrPasswordIncorrect");
+        header("Location: ../login.php&error=UsernameOrPasswordIncorrect");
         exit();
     }
 
     session_start();
     $_SESSION['user'] = $user;
-    header("Location: ../home.php?");
+    header("Location: ../home.php");
     exit();
 }

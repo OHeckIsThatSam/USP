@@ -136,21 +136,17 @@ input[name="dateOfBirth"] {
   margin-right: auto;
   margin-bottom: 15px;
 }
-.slideshow:hover {
-  -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
+.ic {
+  margin-left: auto;
+  padding-right: 25px;
+  padding-top: 4px;
 }
-.ic{
-margin-left: auto;
-padding-right: 25px;
-padding-top: 4px;
-}
-.fa-user-times{
+.fa-user-times {
   color: #000000;
 }
-.fa-user-circle{
+.fa-user-circle {
   color: #000000;
-padding-right: 25px;
+  padding-right: 25px;
 }
 .fa-comments-o {
   color: #000000;

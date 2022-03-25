@@ -125,3 +125,7 @@ input[name="secondEmail"] {
   color: #000000;
   padding-right: 10px;
 }
+/*--------------------- sign process -------------------*/
+h2 {
+  text-align: center;
+}

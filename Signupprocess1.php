@@ -24,24 +24,23 @@
         </div>
     </div> <br>
     <div id="signUpprocess">
-                    <form action="include">
-                            <label for="username">Username:</label><br>
-                            <input name="username" type="txt" class="input"><br>
-                            <label for="email">Email:</label><br>
-                            <input name="email" type="texts" class="input"><br>
-                            <label for="secondEmail">Backup Email:</label><br>
-                            <input name="secondEmail" type="texts" class="input"><br>
-                            <label for="firstName">First Name:</label><br>
-                            <input name="firstName" type="text" class="input"><br>
-                            <label for="lastName">Last Name:</label><br>
-                            <input name="lastName" type="text" class="input"><br>
-                            <label for="phoneNumber">Phone Number:</label><br>
-                            <input name="phoneNumber" type="text" class="input"><br>
-                            <label for="address">Address:</label><br>
-                            <input name="address" type="text" class="input"> <br>
-                            <label for="messagebox">MessageBox</label>
+        <h1>Tell us About your experience</h1>
+        <h2>Work experience</h2> <br>
+                    <form action="get">
+                            <label for="work">Where do you currently work?</label><br>
+                            <input name="work" type="text" class="input"><br>
+                            <label for="role">What is your role?</label><br>
+                            <input name="role" type="text" class="input"><br>
+                            <label for="duration">How long have you worked there?</label><br>
+                            <input name="duration" type="text" class="input"><br>
+                            <label for="previous">Where did you work prevously?</label><br>
+                            <input name="previous" type="text" class="input"><br>
+                            <h2>Education</h2>
+                            <label for="education">What is the highest form of education you've achieved?</label><br>
+                            <input name="education" type="text" class="input"><br>
+                            <label for="study">Where did you study?</label><br>
+                            <input name="study" type="text" class="input"><br>
                 </form>
     </div>
-</form>
 </body>
 </html>

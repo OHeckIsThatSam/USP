@@ -156,13 +156,3 @@ input[name="dateOfBirth"] {
 #signUpprocess {
   text-align: center;
 }
-input[type="txt"] {
-  width: 25%;
-  outline: none;
-  font-size: 15px;
-  border: 1px solid #a8a8a8;
-  border-radius: 4px;
-  transition: all 0.3s ease;
-  height: 25px;
-  margin-bottom: 15px;
-}

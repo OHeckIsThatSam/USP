@@ -21,12 +21,12 @@
                 </div> <br>
                 <nav>
                     <ul>
-                        <li><a href="home.php">Home</a></li>
+                        <!-- <li><a href="home.php">Home</a></li>
                         <li><a href="searchPeople.php">Find People</a></li>
                         <li><a href="conversations.php">Conversations</a></li>
                         <li><a href="viewProfile.php">Profile</a></li>
                         <li><a href="adminDashboard.php">Admin Dashboard</a></li>
-                        <li><a href="login.php">Login</a></li>
+                        <li><a href="login.php">Login</a></li> -->
                     </ul>
                 </nav>
                 <div class="ic">

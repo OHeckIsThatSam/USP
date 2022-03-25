@@ -26,13 +26,11 @@
     <div id="signUpprocess">
                     <form action="include">
                             <label for="username">Username:</label><br>
-                            <input name="username" type="text" class="input"><br>
-                            <label for="password">Password:</label><br>
-                            <input name="password" type="text" class="input"><br>
+                            <input name="username" type="txt" class="input"><br>
                             <label for="email">Email:</label><br>
-                            <input name="email" type="email" class="input"><br>
+                            <input name="email" type="texts" class="input"><br>
                             <label for="secondEmail">Backup Email:</label><br>
-                            <input name="secondEmail" type="email" class="input"><br>
+                            <input name="secondEmail" type="texts" class="input"><br>
                             <label for="firstName">First Name:</label><br>
                             <input name="firstName" type="text" class="input"><br>
                             <label for="lastName">Last Name:</label><br>

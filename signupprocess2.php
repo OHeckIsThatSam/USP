@@ -22,6 +22,14 @@
                 </a>
                 </div>
         </div>
+        <h1>Tell Us about your interests</h1>
+        <div class="left">
+            <p>You have selected these interests</p>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+        </div>
+        <div class="right">
+            Based on your choice do any of these interests you?
+        </div>
     </div>
 </body>
 </html>

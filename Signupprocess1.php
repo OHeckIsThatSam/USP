@@ -15,14 +15,13 @@
 <div id="pageContainer">
         <div class="container">
             <header>
-
                 <div class="logoContainer">
                 <a href="index.php">
                     <img alt="logo" src="images/logoBlack.png"> 
                 </a>
                 </div>
         </div>
-    </div> <br>
+     <br>
     <div id="signUpprocess">
         <h1>Tell us About your experience</h1>
         <h2>Work experience</h2> <br>
@@ -40,7 +39,11 @@
                             <input name="education" type="text" class="input"><br>
                             <label for="study">Where did you study?</label><br>
                             <input name="study" type="text" class="input"><br>
+                            <input type="checkbox" id="mentor" name="mentor">
+                            <label for="mentor">I want to be a mentor</label> <br>
                 </form>
+        </div>
+        <button class="Confirm">Confirm</button>
     </div>
 </body>
 </html>

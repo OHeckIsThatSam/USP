@@ -29,7 +29,11 @@
         </div>
         <div class="right">
             Based on your choice do any of these interests you?
+            <textarea name="" id="" cols="30" rows="10"></textarea>
         </div>
+        <input type="checkbox" id="mentor" name="mentor"> 
+        <label for="mentor">I want to be a mentor</label> <br>
+        <button class="Confirm">Confirm</button>
     </div>
 </body>
 </html>

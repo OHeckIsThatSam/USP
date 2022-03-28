@@ -39,11 +39,9 @@
                             <input name="education" type="text" class="input"><br>
                             <label for="study">Where did you study?</label><br>
                             <input name="study" type="text" class="input"><br>
-                            <input type="checkbox" id="mentor" name="mentor">
-                            <label for="mentor">I want to be a mentor</label> <br>
                 </form>
         </div>
-        <button class="Confirm">Confirm</button>
+        <button class="Next">Next</button>
     </div>
 </body>
 </html>

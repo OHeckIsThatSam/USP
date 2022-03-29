@@ -105,10 +105,8 @@ input[name="secondEmail"] {
 }
 .slideshow {
   width: 100%;
-  border-radius: 25%;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  border: 5px solid #555;
   margin-bottom: 15px;
 }

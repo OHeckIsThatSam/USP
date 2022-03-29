@@ -1,7 +1,3 @@
-<?php
-session_start();
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,15 +8,17 @@ session_start();
     <link rel="stylesheet" media="only screen and (min-width:720px)" href="css/desktop.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="shortcut icon" href="images/logoBlack.png" type="image/x-icon" />
-</head>
-
-<body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <body>
     <div id="pageContainer">
         <div class="container">
             <header>
+
                 <div class="logoContainer">
-                    <img alt="logo" src="images/logoBlack.png">
-                </div>
+                <a href="index.php">
+                    <img alt="logo" src="images/logoBlack.png"> 
+                </a>
+                </div> <br>
                 <nav>
                     <ul>
                         <li><a href="home.php">Home</a></li>
@@ -28,12 +26,13 @@ session_start();
                         <li><a href="conversations.php">Conversations</a></li>
                         <li><a href="viewProfile.php">Profile</a></li>
                         <li><a href="adminDashboard.php">Admin Dashboard</a></li>
-                        <?php 
-                        if(!is_null($_SESSION['user'])) {
-                            echo('<li><a href="login.php">Login</a></li>');
-                        } ?>
                     </ul>
                 </nav>
+                <div class="ic">
+                <i class="fa fa-comments-o" style="font-size:35px"></i>
+                <i class="fa fa-user-circle" style="font-size:35px"></i>
+                <i class="fa fa-user-times" style="font-size:35px"></i>
+                </div>
             </header>
         </div> <br>
         <div id="content">

@@ -193,3 +193,12 @@ textarea {
   height:250px;
   width:250px;
 }
+
+#pc1{
+  text-align: center;
+}
+
+#list1{
+  list-style-type: none;
+  padding-left: 0%;
+}

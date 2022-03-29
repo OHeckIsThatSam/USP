@@ -141,3 +141,10 @@ textarea {
 label {
   text-align: center;
 }
+/*---------Profile Page---------*/
+#profilepicture {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}

@@ -12,6 +12,32 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    
+<div id="pageContainer">
+        <div class="container">
+            <header>
+
+                <div class="logoContainer">
+                <a href="index.php">
+                    <img alt="logo" src="images/logoBlack.png"> 
+                </a>
+                </div>
+        </div>
+    <div class="mentor-quest1">
+        <p>What Industry you have experience in?</p>
+        <textarea name="" id="" cols="30" rows="5"></textarea>
+    </div>
+    <div class="mentor-quest2">
+        <p>Why do you want to be a mentor?</p>
+        <textarea name="" id="" cols="30" rows="5"></textarea>
+    </div>
+    <div class="proof">
+        <p>Please upload proof of your relevant experience here</p>
+        <form action="/action_page.php">
+        <input type="file" id="myFile" name="filename">
+        <!-- <input type="submit"> -->
+        </form>
+    </div>
+    <button class="Mentor-Done">submit</button>
+</div>
 </body>
 </html>

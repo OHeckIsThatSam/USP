@@ -16,7 +16,7 @@
 
                 <div class="logoContainer">
                 <a href="index.php">
-                    <img alt="logo" src="images/logoBlack.png"> 
+                    <img alt="logoo" src="images/logoBlack.png"> 
                 </a>
                 </div> <br>
                 <nav>

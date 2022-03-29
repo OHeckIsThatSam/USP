@@ -2,7 +2,7 @@
 
 // User bussiness logic
 function create($user){
-    require_once '../entities/user.php';
+    require_once 'C:\xampp\htdocs\USP\entities\user.php';
     require 'database.php';
 
     $query = "INSERT INTO user (username, password, email, secondEmail, firstName, lastName, phoneNumber, address, dateOfBirth) 
@@ -15,7 +15,7 @@ function create($user){
 }
 
 function findUserById($id){
-    require_once '../entities/user.php';
+    require_once 'C:\xampp\htdocs\USP\entities\user.php';
     require 'database.php';
 
     $query = "SELECT * FROM user WHERE id = ?";
@@ -69,8 +69,8 @@ function loginDetailsCorrect($username, $password){
 
 // Tag bussiness logic
 
-function findByTagId($id){
-    require_once '../entities/tag.php';
+function findTagById($id){
+    require_once 'C:\xampp\htdocs\USP\entities\tag.php';
     require 'database.php';
     
     $query = "SELECT * FROM tag WHERE id = ?";
@@ -88,7 +88,7 @@ function findByTagId($id){
 }
 
 function findAllTags(){
-    require_once '../entities/tag.php';
+    require_once 'C:\xampp\htdocs\USP\entities\tag.php';
     require 'database.php';
     
     $query = "SELECT * FROM tag ORDER BY name";
@@ -108,7 +108,7 @@ function findAllTags(){
 }
 
 function createUserTags($userId, $tags){
-    require_once '../entities/tag.php';
+    require_once 'C:\xampp\htdocs\USP\entities\tag.php';
     require 'database.php';
     
     // For each tag check if it has a relationship with user in the databse
@@ -135,7 +135,7 @@ function createUserTags($userId, $tags){
 }
 
 function findAllUserTags($userId){
-    require_once '../entities/tag.php';    
+    require_once 'C:\xampp\htdocs\USP\entities\tag.php';    
     require 'database.php';
 
     $query = "SELECT tagId FROM user_tags WHERE userId = ?";
@@ -148,7 +148,7 @@ function findAllUserTags($userId){
 
     $tags = [];
     while ($row = $result->fetch_assoc()) {
-        $tag = $this -> findById($row['tagId']);
+        $tag = findTagById($row['tagId']);
         $tags[] = $tag;
     }
     return $tags;

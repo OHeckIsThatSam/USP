@@ -88,7 +88,7 @@ input[type="submit"] {
   font-size: 30px;
   cursor: pointer;
 }
-.sizefored{
+.sizefored {
   font-size: 15px;
 }
 /* label {
@@ -188,7 +188,7 @@ textarea {
   left: 49%;
 }
 /*---------Profile Page---------*/
-#profilepicture{
+#profilepicture {
   display: block;
   margin-left: auto;
   margin-right: auto;

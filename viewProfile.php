@@ -50,6 +50,7 @@ $user = $_SESSION['user'];
         <div id="content">
             <section>
                 <h1>View Profile</h1>
+                <img id="profilepicture" src="images/profilepicture.jpg" alt="profilepicture">
                 <h2>Your details</h2>
                 <div>
                     <ul>
@@ -58,6 +59,8 @@ $user = $_SESSION['user'];
                         <li>Email: <?php echo($user->getEmail());?></li>
                         <li>Back up email: <?php echo($user->getSecondEmail());?></li>
                     </ul>
+
+                    <a href="editProfile.php">Edit Profile</a>
                 </div>
             </section>
         </div>

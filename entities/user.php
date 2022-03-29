@@ -15,10 +15,6 @@ class User {
     private $description;
     private $reported;
 
-    private $tags;
-
-    private $timeLine;
-
     public function fillByRow(array $row) {
         $this -> setId($row['id']);
         $this -> setUsername($row['username']);
@@ -128,21 +124,5 @@ class User {
 
     public function setReported($reported) {
         $this->reported = $reported;
-    }
-
-    public function getTags() {
-        return $this->tags;
-    }
-
-    public function setTags($tags) {
-        $this->tags = $tags;
-    }
-
-    public function getTimeline() {
-        return $this->timeline;
-    }
-
-    public function setTimeline($timeline) {
-        $this->timeline = $timeline;
     }
 }

@@ -1,7 +1,3 @@
-<?php
-    include_once "include/signUp-inc.php";
-    include_once "include/tagModel.php";
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -60,7 +56,7 @@
                             <label for="address">Address:</label><br>
                             <input name="address" type="text" class="input"><br>
                             <label for="password">Password:</label><br>
-                            <input type="password" value=""id="passinput" class="inputpass"><br><br>
+                            <input type="password" name="password" id="passinput" class="inputpass"><br><br>
                             <label for="dateOfBirth">Date Of Birth:</label><br>
                             <input name="dateOfBirth" type="date" class="input"><br>
                             <input type="checkbox" onclick="password()">Show Password<br><br>

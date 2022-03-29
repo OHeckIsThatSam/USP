@@ -1,10 +1,8 @@
 <?php
 if(isset( $_POST['submit'] )) {
-    require 'database.php';
+    require 'database-inc.php';
     require_once '../entities/user.php';
-    require_once '../models/userModel.php';
 
-    $userModel = new UserModel();
     $user = new User();
 
     $user -> setUsername($_POST['username']);
@@ -17,7 +15,7 @@ if(isset( $_POST['submit'] )) {
     $user -> setAddress($_POST['address']);
     $user -> setDateOfBirth($_POST['dateOfBirth']);
 
-    $userModel -> create($user);
+    create($user);
 
     header("Location: ../login.php");
     exit();

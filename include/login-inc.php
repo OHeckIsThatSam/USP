@@ -1,10 +1,7 @@
 <?php
 
 if(isset( $_POST['submit'] )) {
-    require 'database.php';
-    require_once '../entities/user.php';
-    require_once '../models/userModel.php';
-    $userModel = new UserModel();
+    require 'database-inc.php';
     
     // Get username and password from http header
     $username = $_POST['username'];
@@ -16,7 +13,7 @@ if(isset( $_POST['submit'] )) {
         exit();
     }
 
-    $user = $userModel -> loginDetailsCorrect($username, $password);
+    $user = loginDetailsCorrect($username, $password);
 
     if(empty($user)) {
         header("Location: ../login.php&error=UsernameOrPasswordIncorrect");

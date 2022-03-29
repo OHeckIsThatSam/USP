@@ -187,3 +187,10 @@ textarea {
   position: absolute;
   left: 49%;
 }
+/*---------Profile Page---------*/
+#profilepicture{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}

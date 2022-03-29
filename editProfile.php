@@ -1,3 +1,15 @@
+<?php
+require_once 'include/database-inc.php';
+require_once 'entities/user.php';
+session_start();
+
+if(is_null($_SESSION['user'])) {
+    header("Location: login.php");
+    exit();
+}
+$user = $_SESSION['user'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,6 +51,20 @@
         <div id="content">
             <section>
                 <h1>Edit Profile</h1>
+
+                <h3>Your tags</h3>
+                <?php
+
+                $userId = $user->getId();
+                $tags = findAllUserTags($userId);
+
+                $out = "<ul>";
+                foreach($tags as &$tag) {
+                    $out .= "<li>".$tag->getName()."</li>";
+                }
+                $out .= "</ul>";
+                echo($out);
+                ?>
             </section>
         </div>
 

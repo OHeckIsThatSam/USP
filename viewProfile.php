@@ -58,6 +58,8 @@ $user = $_SESSION['user'];
                         <li>Email: <?php echo($user->getEmail());?></li>
                         <li>Back up email: <?php echo($user->getSecondEmail());?></li>
                     </ul>
+
+                    <a href="editProfile.php">Edit Profile</a>
                 </div>
             </section>
         </div>

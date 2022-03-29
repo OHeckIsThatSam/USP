@@ -50,6 +50,7 @@ $user = $_SESSION['user'];
         <div id="content">
             <section>
                 <h1>View Profile</h1>
+                <img id="profilepicture" src="images/profilepicture.jpg" alt="profilepicture">
                 <h2>Your details</h2>
                 <div>
                     <ul>

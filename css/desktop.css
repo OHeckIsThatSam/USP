@@ -88,6 +88,9 @@ input[type="submit"] {
   font-size: 30px;
   cursor: pointer;
 }
+.sizefored{
+  font-size: 15px;
+}
 /* label {
   margin-left: -19.5%;
 } */
@@ -155,4 +158,39 @@ input[name="dateOfBirth"] {
 /*----------- sign up process 1 -----------------*/
 #signUpprocess {
   text-align: center;
+}
+.mentor-quest1,
+.mentor-quest2 {
+  padding: 5px;
+  margin-left: 100px;
+}
+textarea {
+  resize: none;
+}
+.proof {
+  float: right;
+  margin-right: 350px;
+  margin-top: -170px;
+}
+.Mentor-Done {
+  /* margin-left: 500px;
+  margin-top: 30px; */
+  display: inline-block;
+  font-size: 20px;
+  position: absolute;
+  left: 50%;
+  top: 90%;
+}
+.Next {
+  display: inline-block;
+  font-size: 20px;
+  position: absolute;
+  left: 49%;
+}
+/*---------Profile Page---------*/
+#profilepicture{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }

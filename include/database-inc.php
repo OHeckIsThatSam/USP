@@ -107,31 +107,35 @@ function findAllTags(){
     return $tags;
 }
 
-function createUserTags($userId, $tags){
+function userTagExists($userId, $tagId){
     require_once 'C:\xampp\htdocs\USP\entities\tag.php';
     require 'database.php';
+
+    $query = "SELECT id FROM user_tags WHERE userId = ? AND tagId = ?";
+
+    $stmt = $conn->prepare($query);
+    $stmt->bind_param("ii", $userId, $tagId);
+    $stmt->execute();
+
+    $result = $stmt->get_result();
+    $row = $result->fetch_assoc();
     
-    // For each tag check if it has a relationship with user in the databse
-    foreach($tags as &$tag) {
-        $query = "SELECT id FROM user_tags WHERE userId = ? AND tagId = ?";
+    if(is_null($row)) {
+        return False;
+    }
+    return True;
+}
+
+function createUserTag($userId, $tagId){
+    require 'database.php';
+
+    if(!userTagExists($userId, $tagId)) {
+        $query = "INSERT INTO user_tags (userId, tagId) VALUES (?, ?)";
 
         $stmt = $conn->prepare($query);
-        $stmt->bind_param("ii", $userId, $tag->getId());
+        $stmt->bind_param("ii", $userId, $tagId);
         $stmt->execute();
-
-        $result = $stmt->get_result();
-        $row = $result->fetch_assoc();
-
-        // If nothing is returned then create the relationship
-        if(is_null($row)) {
-            $query = "INSERT INTO user_tags (userId, tagId) VALUES (?, ?) ";
-
-            $stmt = $conn->prepare($query);
-            $stmt->bind_param("ii", $userId, $tag->getId());
-            $stmt->execute();
-        }
     }
-    unset($tag);
 }
 
 function findAllUserTags($userId){

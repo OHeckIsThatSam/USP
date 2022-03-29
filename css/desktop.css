@@ -181,3 +181,9 @@ textarea {
   left: 50%;
   top: 90%;
 }
+.Next {
+  display: inline-block;
+  font-size: 20px;
+  position: absolute;
+  left: 49%;
+}

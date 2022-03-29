@@ -21,6 +21,7 @@
                     <img alt="logo" src="images/logoBlack.png"> 
                 </a>
                 </div>
+            </header>
         </div>
     <div class="mentor-quest1">
         <p>What Industry you have experience in?</p>

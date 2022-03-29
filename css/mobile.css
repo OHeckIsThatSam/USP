@@ -129,3 +129,8 @@ input[name="secondEmail"] {
 h2 {
   text-align: center;
 }
+.Next {
+  display: inline-block;
+  font-size: 20px;
+  margin-left: 50px;
+}

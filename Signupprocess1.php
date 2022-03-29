@@ -20,6 +20,7 @@
                     <img alt="logo" src="images/logoBlack.png"> 
                 </a>
                 </div>
+            </header>
         </div>
      <br>
     <div id="signUpprocess">
@@ -41,7 +42,7 @@
                             <input name="study" type="text" class="input"><br>
                 </form>
         </div>
-        <button class="Next">Next</button>
+        <button class="Next">Next</button> <br>
     </div>
 </body>
 </html>

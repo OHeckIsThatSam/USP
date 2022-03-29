@@ -132,7 +132,11 @@ h2 {
 textarea {
   resize: none;
 }
+<<<<<<< Updated upstream
 .Next {
+=======
+.Next{
+>>>>>>> Stashed changes
   display: inline-block;
   font-size: 20px;
   position: absolute;

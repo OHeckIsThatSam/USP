@@ -129,9 +129,18 @@ input[name="secondEmail"] {
 h2 {
   text-align: center;
 }
-.Mentor-Done {
-  width: 100%;
-}
 textarea {
   resize: none;
 }
+<<<<<<< HEAD
+.Next{
+  display: inline-block;
+  font-size: 20px;
+  position: absolute;
+  left: 40%;
+}
+label{
+  text-align: center;
+}
+=======
+>>>>>>> 32b8713af036afeb5596ab702afc7c67555eaccc

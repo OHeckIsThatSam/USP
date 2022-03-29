@@ -40,6 +40,32 @@ class TagModel {
         return $tags;
     }
 
+    public function createUserTags($userId, $tags){
+        require '../include/database.php';
+        require_once '../entities/tag.php';
+        // For each tag check if it has a relationship with user in the databse
+        foreach($tags as &$tag) {
+            $query = "SELECT id FROM user_tags WHERE userId = ? AND tagId = ?";
+
+            $stmt = $conn->prepare($query);
+            $stmt->bind_param("ii", $userId, $tag->getId());
+            $stmt->execute();
+
+            $result = $stmt->get_result();
+            $row = $result->fetch_assoc();
+
+            // If nothing is returned then create the relationship
+            if(is_null($row)) {
+                $query = "INSERT INTO user_tags (userId, tagId) VALUES (?, ?) ";
+
+                $stmt = $conn->prepare($query);
+                $stmt->bind_param("ii", $userId, $tag->getId());
+                $stmt->execute();
+            }
+        }
+        unset($tag);
+    }
+
     public function findAllUserTags($userId){
         require '../include/database.php';
         require_once '../entities/tag.php';

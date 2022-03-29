@@ -1,4 +1,7 @@
-
+<?php
+    include_once "include/signUp-inc.php";
+    include_once "include/tagModel.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

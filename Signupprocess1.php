@@ -35,7 +35,7 @@
                             <label for="previous">Where did you work prevously?</label><br>
                             <input name="previous" type="text" class="input"><br>
                             <h2>Education</h2>
-                            <label for="education">What is the highest form of education you've achieved?</label><br>
+                            <label class="sizefored" for="education">What is the highest form of education you've achieved?</label><br>
                             <input name="education" type="text" class="input"><br>
                             <label for="study">Where did you study?</label><br>
                             <input name="study" type="text" class="input"><br>

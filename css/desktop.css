@@ -88,6 +88,9 @@ input[type="submit"] {
   font-size: 30px;
   cursor: pointer;
 }
+.sizefored{
+  font-size: 15px;
+}
 /* label {
   margin-left: -19.5%;
 } */

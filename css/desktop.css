@@ -190,15 +190,15 @@ textarea {
 /*---------Profile Page---------*/
 #profilepicture {
   display: block;
-  height:250px;
-  width:250px;
+  height: 250px;
+  width: 250px;
 }
 
-#pc1{
+#pc1 {
   text-align: center;
 }
 
-#list1{
+#list1 {
   list-style-type: none;
   padding-left: 0%;
 }

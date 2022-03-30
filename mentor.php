@@ -32,7 +32,7 @@
         <textarea name="" id="" cols="30" rows="5"></textarea>
     </div>
     <div class="proof">
-        <p>Please upload proof of your relevant experience here</p>
+        <p class="Text-here">Please upload proof of your relevant experience here</p>
         <form action="/action_page.php">
         <input type="file" id="myFile" name="filename">
         <!-- <input type="submit"> -->

@@ -148,3 +148,13 @@ label {
   margin-right: auto;
   width: 50%;
 }
+.Mentor-Done {
+  display: inline-block;
+  font-size: 20px;
+  position: absolute;
+  left: 25%;
+  top: 60%;
+}
+.Text-here {
+  width: 50%;
+}

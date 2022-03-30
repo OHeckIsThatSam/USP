@@ -157,3 +157,86 @@ function findAllUserTags($userId){
     }
     return $tags;
 }
+
+// Message bussiness logic
+
+function findMessageById($messageId){
+    require_once 'C:\xampp\htdocs\USP\entities\message.php';
+    require 'database.php';
+
+    $query = "SELECT * FROM message WHERE id = ?";
+
+    $stmt = $conn->prepare($query);
+    $stmt->bind_param("i", $messageId);
+    $stmt->execute();
+
+    $result = $stmt->get_result();
+    $row = $result->fetch_assoc();
+
+    $message = new Message();
+    $message -> fillByRow($row);
+    return $message;
+}
+
+function findAllMessages(){
+    require_once 'C:\xampp\htdocs\USP\entities\message.php';
+    require 'database.php';
+
+    $query = "SELECT * FROM message ORDER BY timeSent";
+
+    $stmt = $conn->prepare($query);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    $messages = [];
+    while ($row = $result->fetch_assoc()) {
+        $message = new Message();
+        $message -> fillByRow($row);
+        $messages[] = $message;
+    }
+    return $messages;
+}
+
+function findAllUserConversations($userId){
+    require_once 'C:\xampp\htdocs\USP\entities\conversation.php';
+    require_once 'C:\xampp\htdocs\USP\entities\message.php';
+    require 'database.php';
+
+    // Get all conversations where the user is involved
+    $query = "SELECT * FROM conversation WHERE userId1 = ? OR userId2 = ?";
+
+    $stmt = $conn->prepare($query);
+    $stmt->bind_param("ii", $userId, $userId);
+    $stmt->execute();
+
+    $result = $stmt->get_result();
+    $conversations = [];
+    while ($row = $result->fetch_assoc()) {
+        $conversation = new Conversation();
+        $conversation->fillByRow($row);
+
+        // Get all the messages with that conversation id
+        $query = "SELECT * FROM message WHERE conversationId = ? ORDER BY timeSent";
+
+        $stmt = $conn->prepare($query);
+        $conversationId = $conversation->getId();
+        $stmt->bind_param("i", $conversationId);
+        $stmt->execute();
+
+        $result = $stmt->get_result();
+
+        $messages = [];
+        while ($row = $result->fetch_assoc()) {
+            $message = new Message();
+            $message -> fillByRow($row);
+            $messages[] = $message;
+        }
+        
+        // Populate the conversation object with the messages
+        $conversation->setMessages($messages);
+
+        // Add the conversation to the array
+        $conversations[] = $conversation;
+    }
+    return $conversations;
+}

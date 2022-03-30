@@ -141,20 +141,24 @@ textarea {
 label {
   text-align: center;
 }
-/*---------Profile Page---------*/
-#profilepicture {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
 .Mentor-Done {
   display: inline-block;
   font-size: 20px;
   position: absolute;
   left: 25%;
-  top: 60%;
+  top: 70%;
 }
 .Text-here {
+  width: 50%;
+}
+.configure {
+  margin-top: 20px;
+  font-size: 20px;
+}
+/*---------Profile Page---------*/
+#profilepicture {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   width: 50%;
 }

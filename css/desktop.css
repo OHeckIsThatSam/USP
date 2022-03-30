@@ -190,6 +190,28 @@ textarea {
   position: absolute;
   left: 49%;
 }
+.ask-ment2 {
+  float: right;
+  margin-right: 20px;
+  margin-top: -210px;
+}
+.ask-mentor {
+  margin-left: 20px;
+}
+.email-men {
+  text-align: center;
+  margin-top: 10px;
+}
+input[name="mail"] {
+  width: 20%;
+}
+.configure {
+  margin-top: 20px;
+  font-size: 20px;
+}
+.checkb {
+  margin-top: 10px;
+}
 /*---------Profile Page---------*/
 #profilepicture {
   display: block;

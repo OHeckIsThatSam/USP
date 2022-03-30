@@ -242,3 +242,11 @@ input[name="mail"] {
   margin-right: auto;
   width: 50%;
 }
+
+.floatRight {
+  text-align: right;
+}
+
+.floatLeft {
+  text-align: left;
+}

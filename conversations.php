@@ -55,14 +55,19 @@ $user = $_SESSION['user'];
                 require_once 'C:\xampp\htdocs\USP\entities\message.php';
 
                 $conversations = findAllUserConversations($user->getId());
-
-                foreach($conversations as &$conversation) {
-                    $messages = $conversation->getMessages();
-                    foreach($messages as &$message) {
-                        echo($message->getContent());
-                    }
-                }
                 
+                $out = "<div>";
+                foreach($conversations as &$conversation) {
+                    if($user->getId() == $conversation->getUserId1()) {
+                        $otherUser = findUserById($conversation->getUserId2());
+                    } else {
+                        $otherUser = findUserById($conversation->getUserId1());
+                    }
+                    $out .= "<div><h4>".$otherUser->getFirstName()." ".$otherUser->getFirstName()."</h4>";
+                    $out .= "<a href=\"viewConversation.php?id=".$conversation->getId()."\">View Conversation</a></div>";
+                }
+                $out .= "</div>";
+                echo($out);
                 ?>
             </section>
         </div>

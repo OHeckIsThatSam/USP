@@ -41,6 +41,27 @@
                 <h1>Home</h1>
             </section>
         </div>
+        <div class="post-conta">
+                    <div class="post-row">
+                        <div class="user-profilee">
+                            <img src="imagesHTML-Icons/profile-pic.png" alt="">
+                            <div>
+                                <p>Michael Schofield</p>
+                                <span>Date</span>
+                            </div>
+                        </div>
+                        <a href="#"><i class="fa fa-ellipsis-v"></i></a>
+                    </div>
+                    <img src="imagesHTML-Icons/feed-image-1.png" alt="Feed" class="post-image">
+                    <div class="post-row">
+                        <div class="activity-icons">
+
+                        </div>
+                        <div class="post-profile-icon">
+                            <img src="imagesHTML-Icons/profile-pic.png" alt=""><i class="fa fa-caret-down"></i>
+                        </div>
+                    </div>
+                </div>
         <footer>
             <div>
                 <a href="#">Contact/Find Us</a>

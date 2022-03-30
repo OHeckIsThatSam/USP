@@ -162,3 +162,11 @@ label {
   margin-right: auto;
   width: 50%;
 }
+.post-conta {
+  width: 90%;
+  background: white;
+  border-radius: 6px;
+  padding: 20px;
+  color: #626262;
+  margin: 20px 0;
+}

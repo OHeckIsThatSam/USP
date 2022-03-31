@@ -57,7 +57,7 @@ input[type="text"] {
   height: 25px;
   margin-bottom: 15px;
 }
-input[type="submit"] {
+/* input[type="submit"] {
   background-color: grey;
   color: white;
   cursor: pointer;
@@ -72,7 +72,7 @@ input[type="submit"] {
   padding-right: 20px;
   text-decoration: none;
   margin-top: 20px;
-}
+} */
 #loginContainer,
 #signUpContainer {
   text-align: center;

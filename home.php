@@ -41,6 +41,13 @@
                 <h1>Home</h1>
             </section>
         </div>
+        <div class="post-input-container">
+                        <textarea class="textho" rows="3" placeholder="What's your thoughts?"></textarea>
+                        <form action="/action_page.php">
+                            <input type="file" id="myFile" name="filename">
+                            <button>Submit</button>
+                        </form>
+            </div>
         <div class="post-conta">
                     <div class="post-row">
                         <div class="user-profilee">

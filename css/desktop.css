@@ -57,22 +57,6 @@ input[type="text"] {
   height: 25px;
   margin-bottom: 15px;
 }
-/* input[type="submit"] {
-  background-color: grey;
-  color: white;
-  cursor: pointer;
-  text-align: center;
-  border: 2px solid black;
-  width: 20%;
-  margin: auto;
-  font-weight: bolder;
-  font-size: 25px;
-  cursor: pointer;
-  display: block;
-  padding-right: 20px;
-  text-decoration: none;
-  margin-top: 20px;
-} */
 #loginContainer,
 #signUpContainer {
   text-align: center;

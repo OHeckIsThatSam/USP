@@ -60,9 +60,14 @@ $user = $_SESSION['user'];
                         <li>Back up email: <?php echo($user->getSecondEmail());?></li>
                     </ul>
 
-                    <a href="editProfile.php">Edit Profile</a>
+                    <form action="viewProfile.php" method="text">
+                    <label for="goalIPT">Input a goal you have achieved here:</label><br>
+                    <input type="text" id="goalIPT" name="goalIPT" value=""><br>
+                    <input type="submit" value="Submit">
+                    </form> 
                 </div>
             </section>
+            <a href="editProfile.php">Edit Profile</a>
         </div>
 
         <footer>

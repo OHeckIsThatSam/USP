@@ -2,7 +2,7 @@
 
 // User bussiness logic
 function create($user){
-    require_once '../entities/user.php';
+    require_once 'C:\xampp\htdocs\USP\entities\user.php';
     require 'database.php';
 
     $query = "INSERT INTO user (username, password, email, secondEmail, firstName, lastName, phoneNumber, address, dateOfBirth) 
@@ -15,7 +15,7 @@ function create($user){
 }
 
 function findUserById($id){
-    require_once '../entities/user.php';
+    require_once 'C:\xampp\htdocs\USP\entities\user.php';
     require 'database.php';
 
     $query = "SELECT * FROM user WHERE id = ?";
@@ -69,8 +69,8 @@ function loginDetailsCorrect($username, $password){
 
 // Tag bussiness logic
 
-function findByTagId($id){
-    require_once '../entities/tag.php';
+function findTagById($id){
+    require_once 'C:\xampp\htdocs\USP\entities\tag.php';
     require 'database.php';
     
     $query = "SELECT * FROM tag WHERE id = ?";
@@ -88,7 +88,7 @@ function findByTagId($id){
 }
 
 function findAllTags(){
-    require_once '../entities/tag.php';
+    require_once 'C:\xampp\htdocs\USP\entities\tag.php';
     require 'database.php';
     
     $query = "SELECT * FROM tag ORDER BY name";
@@ -107,35 +107,39 @@ function findAllTags(){
     return $tags;
 }
 
-function createUserTags($userId, $tags){
-    require_once '../entities/tag.php';
+function userTagExists($userId, $tagId){
+    require_once 'C:\xampp\htdocs\USP\entities\tag.php';
     require 'database.php';
+
+    $query = "SELECT id FROM user_tags WHERE userId = ? AND tagId = ?";
+
+    $stmt = $conn->prepare($query);
+    $stmt->bind_param("ii", $userId, $tagId);
+    $stmt->execute();
+
+    $result = $stmt->get_result();
+    $row = $result->fetch_assoc();
     
-    // For each tag check if it has a relationship with user in the databse
-    foreach($tags as &$tag) {
-        $query = "SELECT id FROM user_tags WHERE userId = ? AND tagId = ?";
+    if(is_null($row)) {
+        return False;
+    }
+    return True;
+}
+
+function createUserTag($userId, $tagId){
+    require 'database.php';
+
+    if(!userTagExists($userId, $tagId)) {
+        $query = "INSERT INTO user_tags (userId, tagId) VALUES (?, ?)";
 
         $stmt = $conn->prepare($query);
-        $stmt->bind_param("ii", $userId, $tag->getId());
+        $stmt->bind_param("ii", $userId, $tagId);
         $stmt->execute();
-
-        $result = $stmt->get_result();
-        $row = $result->fetch_assoc();
-
-        // If nothing is returned then create the relationship
-        if(is_null($row)) {
-            $query = "INSERT INTO user_tags (userId, tagId) VALUES (?, ?) ";
-
-            $stmt = $conn->prepare($query);
-            $stmt->bind_param("ii", $userId, $tag->getId());
-            $stmt->execute();
-        }
     }
-    unset($tag);
 }
 
 function findAllUserTags($userId){
-    require_once '../entities/tag.php';    
+    require_once 'C:\xampp\htdocs\USP\entities\tag.php';    
     require 'database.php';
 
     $query = "SELECT tagId FROM user_tags WHERE userId = ?";
@@ -148,8 +152,125 @@ function findAllUserTags($userId){
 
     $tags = [];
     while ($row = $result->fetch_assoc()) {
-        $tag = $this -> findById($row['tagId']);
+        $tag = findTagById($row['tagId']);
         $tags[] = $tag;
     }
     return $tags;
+}
+
+// Message bussiness logic
+
+function findMessageById($messageId){
+    require_once 'C:\xampp\htdocs\USP\entities\message.php';
+    require 'database.php';
+
+    $query = "SELECT * FROM message WHERE id = ?";
+
+    $stmt = $conn->prepare($query);
+    $stmt->bind_param("i", $messageId);
+    $stmt->execute();
+
+    $result = $stmt->get_result();
+    $row = $result->fetch_assoc();
+
+    $message = new Message();
+    $message -> fillByRow($row);
+    return $message;
+}
+
+function findAllMessages(){
+    require_once 'C:\xampp\htdocs\USP\entities\message.php';
+    require 'database.php';
+
+    $query = "SELECT * FROM message ORDER BY DATE(timeSent) DESC";
+
+    $stmt = $conn->prepare($query);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    $messages = [];
+    while ($row = $result->fetch_assoc()) {
+        $message = new Message();
+        $message -> fillByRow($row);
+        $messages[] = $message;
+    }
+    return $messages;
+}
+
+function createMessage($senderId, $conversationId, $timeSent, $content){
+    require_once 'C:\xampp\htdocs\USP\entities\message.php';
+    require 'database.php';
+
+    $query = "INSERT INTO message (senderId, conversationId, timeSent, content) VALUES (?, ?, ?, ?)";
+
+    $stmt = $conn->prepare($query);
+    $stmt->bind_param("iiss", $senderId, $conversationId, $timeSent, $content);
+    $stmt->execute();
+}
+
+function findConversationById($conversationId){
+    require_once 'C:\xampp\htdocs\USP\entities\conversation.php';
+    require 'database.php';
+
+    $query = "SELECT * FROM conversation WHERE id = ?";
+
+    $stmt = $conn->prepare($query);
+    $stmt->bind_param("i", $conversationId);
+    $stmt->execute();
+
+    $result = $stmt->get_result();
+    $row = $result->fetch_assoc();
+
+    $conversation = new Conversation();
+    $conversation->fillByRow($row);
+    $conversation->setMessages(findMessagesByConversationId($conversationId));
+    return $conversation;
+}
+
+function findMessagesByConversationId($conversationId){
+    require_once 'C:\xampp\htdocs\USP\entities\message.php';
+    require 'database.php';
+
+    $query = "SELECT * FROM message WHERE conversationId = ? ORDER BY DATE(timeSent) DESC";
+
+    $stmt = $conn->prepare($query);
+    $stmt->bind_param("i", $conversationId);
+    $stmt->execute();
+
+    $result = $stmt->get_result();
+
+    $messages = [];
+    while ($row = $result->fetch_assoc()) {
+        $message = new Message();
+        $message -> fillByRow($row);
+        $messages[] = $message;
+    }
+    return $messages;
+}
+
+function findAllUserConversations($userId){
+    require_once 'C:\xampp\htdocs\USP\entities\conversation.php';
+    require_once 'C:\xampp\htdocs\USP\entities\message.php';
+    require 'database.php';
+
+    // Get all conversations where the user is involved
+    $query = "SELECT * FROM conversation WHERE userId1 = ? OR userId2 = ?";
+
+    $stmt = $conn->prepare($query);
+    $stmt->bind_param("ii", $userId, $userId);
+    $stmt->execute();
+
+    $result = $stmt->get_result();
+    $conversations = [];
+    while ($row = $result->fetch_assoc()) {
+        $conversation = new Conversation();
+        $conversation->fillByRow($row);
+        
+        // Populate the conversation object with the messages
+        $conversation->setMessages(findMessagesByConversationId($conversation->getId()));
+
+        // Add the conversation to the array
+        $conversations[] = $conversation;
+    }
+    return $conversations;
 }

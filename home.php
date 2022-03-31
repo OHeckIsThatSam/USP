@@ -47,11 +47,13 @@
                             <img src="" alt="">
                             <div>
                                 <p>Name</p>
+                                <p>Michael Schofield</p>
                                 <span>Date</span>
                             </div>
                         </div>
                     </div>
                     <img class="feed-img" src="" alt="">
+                    <img class="feed-img" src="images/business.jpg" alt="Feed">
                     <div class="post-row">
                         <div class="activity-icons">
                         

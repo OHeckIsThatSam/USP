@@ -23,7 +23,6 @@
                 </div>
             </header>
         </div>
-        <h1 style="text-align:left">Mentor Signup</h1>
     <div class="mentor-quest1">
         <p>What Industry you have experience in?</p>
         <textarea name="" id="" cols="30" rows="5"></textarea>
@@ -33,7 +32,7 @@
         <textarea name="" id="" cols="30" rows="5"></textarea>
     </div>
     <div class="proof">
-        <p class="Text-here">Please upload proof of your relevant experience here</p>
+        <p>Please upload proof of your relevant experience here</p>
         <form action="/action_page.php">
         <input type="file" id="myFile" name="filename">
         <!-- <input type="submit"> -->

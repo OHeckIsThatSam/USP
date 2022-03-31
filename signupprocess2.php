@@ -21,21 +21,6 @@
                 </a>
             </header>
                 </div>
-            <h1>Sign Up process</h1>
-        </div>
-        <div class="ask-mentor">
-            <p>You have selected these interests?</p>
-            <textarea name="" id="" cols="45" rows="10"></textarea>
-        </div>
-        <div class="ask-ment2">
-            <p>Based on your choice do any of these interests you?</p>
-            <textarea name="" id="" cols="45" rows="10"></textarea>
-        </div>
-        <div class="email-men">
-            <label class="mails" for="mail">Please enter your email adress below:</label> <br>
-            <input name="mail" type="email" class="input"> <br>
-            <input class="checkb" type="checkbox" name="" id="">I want to be mentor <br>
-            <button class="configure">Confirm</button> <br> <br>
         </div>
     </div>
 </body>

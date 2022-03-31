@@ -8,12 +8,6 @@ if(is_null($_SESSION['user'])) {
     exit();
 }
 $user = $_SESSION['user'];
-
-if(isset( $_POST['addTag'] )) {
-    $userId = $user->getId();
-    $tagId = $_POST['tagId'];
-    createUserTag($userId, $tagId);
-}
 ?>
 
 <!DOCTYPE html>
@@ -59,34 +53,18 @@ if(isset( $_POST['addTag'] )) {
                 <h1>Edit Profile</h1>
 
                 <h3>Your tags</h3>
-                <ul id="tagList">
                 <?php
+
                 $userId = $user->getId();
                 $tags = findAllUserTags($userId);
 
-                $out = "";
+                $out = "<ul>";
                 foreach($tags as &$tag) {
                     $out .= "<li>".$tag->getName()."</li>";
                 }
+                $out .= "</ul>";
                 echo($out);
                 ?>
-                </ul>
-
-                <h3>Add tags</h3>
-                <form action="editProfile.php" method="post">
-                <label for="tags">Add a tag: </label>
-                <select name="tagId" id="tags">
-                    <?php
-                    $allTags = findAllTags();
-                    $out = "";
-                    foreach($allTags as &$tag){
-                        $out .= "<option value='". $tag->getId() ."'>". $tag->getName() ."</option>";
-                    }
-                    echo($out);
-                    ?>
-                </select>
-                <input type="submit" value="Add" name="addTag">
-                </form>
             </section>
         </div>
 

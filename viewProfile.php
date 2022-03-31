@@ -52,8 +52,8 @@ $user = $_SESSION['user'];
                 <h1>View Profile</h1>
                 <img id="profilepicture" src="images/profilepicture.jpg" alt="profilepicture">
                 <h2>Your details</h2>
-                <div id="pc1">
-                    <ul id="list1">
+                <div>
+                    <ul>
                         <li>First name: <?php echo($user->getFirstName());?></li>
                         <li>Last name: <?php echo($user->getLastName());?></li>
                         <li>Email: <?php echo($user->getEmail());?></li>

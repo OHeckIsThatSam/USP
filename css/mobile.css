@@ -132,44 +132,6 @@ h2 {
 textarea {
   resize: none;
 }
-.Next {
-  display: inline-block;
-  font-size: 20px;
-  position: absolute;
-  left: 40%;
-}
-label {
+label{
   text-align: center;
-}
-.Mentor-Done {
-  display: inline-block;
-  font-size: 20px;
-  position: absolute;
-  left: 25%;
-  top: 70%;
-}
-.Text-here {
-  width: 50%;
-}
-.configure {
-  margin-top: 20px;
-  font-size: 20px;
-}
-/*---------Profile Page---------*/
-#profilepicture {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
-.post-conta {
-  width: 90%;
-  background: white;
-  border-radius: 6px;
-  padding: 20px;
-  color: #626262;
-  margin: 20px 0;
-}
-.feed-img {
-  width: 100%;
 }

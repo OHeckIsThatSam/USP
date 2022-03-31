@@ -232,24 +232,15 @@ input[name="mail"] {
   display: block
 }
 .post-conta {
-  width: 96.7%;
   background: white;
-  border-radius: 6px;
-  padding: 20px;
-  color: #626262;
-  margin: 20px 0;
-}
-/*------------ home page --------*/
-.feed-img {
+  color: #323232;
   display: block;
   margin-left: auto;
   margin-right: auto;
   background: white;
-  /* border-radius: 6px;
-  padding: 20px;
-  color: #626262;
-  margin: 20px 0; */
+  width: 50%;
 }
+/*------------ home page --------*/
 .floatRight {
   text-align: right;
 }

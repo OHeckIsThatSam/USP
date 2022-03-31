@@ -57,22 +57,6 @@ input[type="text"] {
   height: 25px;
   margin-bottom: 15px;
 }
-input[type="submit"] {
-  background-color: grey;
-  color: white;
-  cursor: pointer;
-  text-align: center;
-  border: 2px solid black;
-  width: 65%;
-  margin: auto;
-  font-weight: bolder;
-  font-size: 25px;
-  cursor: pointer;
-  display: block;
-  padding-right: 20px;
-  text-decoration: none;
-  margin-top: 20px;
-}
 #loginContainer,
 #signUpContainer {
   text-align: center;
@@ -83,7 +67,7 @@ input[type="submit"] {
   border: 2px solid black;
   width: 45%;
   margin: auto;
-  background-color: #02b4fa;
+  background-color: #c8dbe2;
   font-weight: bolder;
   font-size: 30px;
   cursor: pointer;
@@ -125,6 +109,37 @@ input[name="secondEmail"] {
   color: #000000;
   padding-right: 10px;
 }
+.configure{
+  top: 15px;
+  position: relative;
+  margin-left: 115px;
+  padding-right: 10px;
+  width: 150px;
+  background-color: #c8dbe2;
+
+}
+.ask-mentor{
+  margin-bottom: 25px;
+  padding-left: 25px;
+}
+.ask-ment2{
+margin-bottom: 25px;
+padding-left: 25px;
+
+}
+.mails{
+  margin-left: 80px;
+  margin-bottom: 100px;
+}
+.mailbox{
+  margin-top: 5px;
+  margin-left: 115px;
+}
+
+.checkb{
+  margin-top: 30px;
+  margin-left: 115px;
+}
 /*--------------------- sign process -------------------*/
 h2 {
   text-align: center;
@@ -135,3 +150,4 @@ textarea {
 label{
   text-align: center;
 }
+/*-------------- profile build page -------------------------*/

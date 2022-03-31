@@ -215,14 +215,9 @@ input[name="mail"] {
 /*---------Profile Page---------*/
 #profilepicture {
   display: block;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 42cd149e5a18d769c474dc356f952f59f687bc03
   height: 250px;
   width: 250px;
 }
-
 #pc1 {
   text-align: center;
 }
@@ -231,14 +226,11 @@ input[name="mail"] {
   list-style-type: none;
   padding-left: 0%;
 }
-<<<<<<< HEAD
 /*------------ home page --------*/
 .post-conta {
   width: 50%;
-  display: block;
-=======
->>>>>>> e14fe1463422efebb4aacb21837ff62137c242dd
-=======
+  display: block
+}
 .post-conta {
   width: 96.7%;
   background: white;
@@ -250,7 +242,6 @@ input[name="mail"] {
 /*------------ home page --------*/
 .feed-img {
   display: block;
->>>>>>> 42cd149e5a18d769c474dc356f952f59f687bc03
   margin-left: auto;
   margin-right: auto;
   background: white;
@@ -259,7 +250,6 @@ input[name="mail"] {
   color: #626262;
   margin: 20px 0; */
 }
-
 .floatRight {
   text-align: right;
 }

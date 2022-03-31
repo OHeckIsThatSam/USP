@@ -218,7 +218,6 @@ input[name="mail"] {
   height: 250px;
   width: 250px;
 }
-
 #pc1 {
   text-align: center;
 }
@@ -227,22 +226,21 @@ input[name="mail"] {
   list-style-type: none;
   padding-left: 0%;
 }
-.post-conta {
-  width: 96.7%;
-  background: white;
-  border-radius: 6px;
-  padding: 20px;
-  color: #626262;
-  margin: 20px 0;
-}
 /*------------ home page --------*/
-.feed-img {
+.post-conta {
+  width: 50%;
+  display: block
+}
+.post-conta {
+  background: white;
+  color: #323232;
   display: block;
   margin-left: auto;
   margin-right: auto;
+  background: white;
   width: 50%;
 }
-
+/*------------ home page --------*/
 .floatRight {
   text-align: right;
 }

@@ -33,7 +33,7 @@
         </div>
         <div class="email-men">
             <label class="mails" for="mail">Please enter your email adress below:</label> <br>
-            <input name="mail" type="email" class="input"> <br>
+            <input class="mailbox" name="mail" type="email" class="input"> <br>
             <input class="checkb" type="checkbox" name="" id="">I want to be mentor <br>
             <button class="configure">Confirm</button> <br> <br>
         </div>

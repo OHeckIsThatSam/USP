@@ -15,7 +15,6 @@
     <div id="pageContainer">
         <div class="container">
             <header>
-
                 <div class="logoContainer">
                 <a href="index.php">
                     <img alt="logo" src="images/logoBlack.png"> 

@@ -1,3 +1,14 @@
+<?php
+require_once 'include/database-inc.php';
+require_once 'entities/user.php';
+session_start();
+
+if(is_null($_SESSION['user'])) {
+    header("Location: login.php");
+    exit();
+}
+$user = $_SESSION['user'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,6 +50,25 @@
         <div id="content">
             <section>
                 <h1>Conversations</h1>
+                <?php
+                require_once 'C:\xampp\htdocs\USP\entities\conversation.php';
+                require_once 'C:\xampp\htdocs\USP\entities\message.php';
+
+                $conversations = findAllUserConversations($user->getId());
+                
+                $out = "<div>";
+                foreach($conversations as &$conversation) {
+                    if($user->getId() == $conversation->getUserId1()) {
+                        $otherUser = findUserById($conversation->getUserId2());
+                    } else {
+                        $otherUser = findUserById($conversation->getUserId1());
+                    }
+                    $out .= "<div><h4>".$otherUser->getFirstName()." ".$otherUser->getFirstName()."</h4>";
+                    $out .= "<a href=\"viewConversation.php?id=".$conversation->getId()."\">View Conversation</a></div>";
+                }
+                $out .= "</div>";
+                echo($out);
+                ?>
             </section>
         </div>
 

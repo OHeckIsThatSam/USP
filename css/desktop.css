@@ -181,16 +181,72 @@ textarea {
   left: 50%;
   top: 90%;
 }
+.Text-here {
+  width: 100%;
+}
 .Next {
   display: inline-block;
   font-size: 20px;
   position: absolute;
   left: 49%;
 }
+.ask-ment2 {
+  float: right;
+  margin-right: 20px;
+  margin-top: -210px;
+}
+.ask-mentor {
+  margin-left: 20px;
+}
+.email-men {
+  text-align: center;
+  margin-top: 10px;
+}
+input[name="mail"] {
+  width: 20%;
+}
+.configure {
+  margin-top: 20px;
+  font-size: 20px;
+}
+.checkb {
+  margin-top: 10px;
+}
 /*---------Profile Page---------*/
 #profilepicture {
+  display: block;
+  height: 250px;
+  width: 250px;
+}
+
+#pc1 {
+  text-align: center;
+}
+
+#list1 {
+  list-style-type: none;
+  padding-left: 0%;
+}
+.post-conta {
+  width: 96.7%;
+  background: white;
+  border-radius: 6px;
+  padding: 20px;
+  color: #626262;
+  margin: 20px 0;
+}
+/*------------ home page --------*/
+.feed-img {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
+}
+
+.floatRight {
+  text-align: right;
+}
+
+.floatLeft {
+  text-align: left;
 }

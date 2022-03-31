@@ -41,6 +41,23 @@
                 <h1>Home</h1>
             </section>
         </div>
+        <div class="post-conta">
+                    <div class="post-row">
+                        <div class="user-profilee">
+                            <img src="" alt="">
+                            <div>
+                                <p>Michael Schofield</p>
+                                <span>Date</span>
+                            </div>
+                        </div>
+                    </div>
+                    <img class="feed-img" src="images/business.jpg" alt="Feed">
+                    <div class="post-row">
+                        <div class="activity-icons">
+                        
+                        </div>
+                    </div>
+                </div>
         <footer>
             <div>
                 <a href="#">Contact/Find Us</a>

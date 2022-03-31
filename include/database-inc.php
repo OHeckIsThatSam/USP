@@ -67,6 +67,31 @@ function loginDetailsCorrect($username, $password){
     return $user;
 }
 
+function findUsersByTags($tags){
+    require_once 'C:\xampp\htdocs\USP\entities\user.php';
+    require_once 'C:\xampp\htdocs\USP\entities\tag.php';
+    require 'database.php';
+
+    $users = [];
+    foreach($tags as &$tag) {
+        $query = "SELECT userId FROM user_tags WHERE tagId = ?";
+
+        $stmt = $conn->prepare($query);
+        $tagId = $tag->getId();
+        $stmt->bind_param("i", $tagId);
+        $stmt->execute();
+
+        $result = $stmt->get_result();
+        while($row = $result->fetch_assoc()) {
+            $user = findUserById($row);
+            if(!in_array($user, $users)) {
+                $users[] = $user;
+            } 
+        }
+    }
+    return $users;
+}
+
 // Tag bussiness logic
 
 function findTagById($id){
@@ -158,6 +183,30 @@ function findAllUserTags($userId){
     return $tags;
 }
 
+function findTagsByStringArray($stringArray){
+    require_once 'C:\xampp\htdocs\USP\entities\tag.php';    
+    require 'database.php';
+
+    $tags = [];
+    foreach($stringArray as &$tagName) {
+        $query = "SELECT * FROM tag WHERE name LIKE ?";
+
+        $stmt = $conn->prepare($query);
+        $stmt->bind_param("s", $tagName);
+        $stmt->execute();
+
+        $result = $stmt->get_result();
+        $row = $result->fetch_assoc();
+        
+        if(!is_null($row)) {
+            $tag = new Tag();
+            $tag->fillByRow($row);
+            $tags[] = $tag;
+        }
+    }
+    return $tags;
+}
+
 // Message bussiness logic
 
 function findMessageById($messageId){
@@ -231,7 +280,7 @@ function findMessagesByConversationId($conversationId){
     require_once 'C:\xampp\htdocs\USP\entities\message.php';
     require 'database.php';
 
-    $query = "SELECT * FROM message WHERE conversationId = ? ORDER BY DATE(timeSent) DESC";
+    $query = "SELECT * FROM message WHERE conversationId = ? ORDER BY DATE(timeSent)";
 
     $stmt = $conn->prepare($query);
     $stmt->bind_param("i", $conversationId);

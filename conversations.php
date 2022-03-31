@@ -63,7 +63,7 @@ $user = $_SESSION['user'];
                     } else {
                         $otherUser = findUserById($conversation->getUserId1());
                     }
-                    $out .= "<div><h4>".$otherUser->getFirstName()." ".$otherUser->getFirstName()."</h4>";
+                    $out .= "<div><h4>".$otherUser->getFirstName()." ".$otherUser->getLastName()."</h4>";
                     $out .= "<a href=\"viewConversation.php?id=".$conversation->getId()."\">View Conversation</a></div>";
                 }
                 $out .= "</div>";

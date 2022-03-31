@@ -1,4 +1,12 @@
+<?php
+require_once 'include/database-inc.php';
 
+if(isset($_POST['search'])) {
+    $inputArray = explode(" ", $_POST['tags']);
+    $tags = findTagsByStringArray($inputArray);
+    $users = findUsersByTags($tags);
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -41,11 +49,22 @@
         <div id="content">
             <section>
                 <h1>Search People</h1>
+                <div class="topnav">
+                    <form action="searchPeople.php" method="post">
+                        <input type="text" placeholder="Search.." name="tags">
+                        <input type="submit" name="search" value="search">
+                    </form>
+                </div>
+                <?php
+                $out = "<div>";
+                foreach($users as &$user) {
+                    $out .= "<p>".$user->getFirstName()." ".$user->getLastName();
+                }
+                echo($out);
+                ?>
             </section>
         </div>
-        <div class="topnav">
-            <input type="text" placeholder="Search..">
-        </div>
+        
 
         <footer>
             <div>

@@ -16,7 +16,7 @@ if(isset( $_POST['submit'] )) {
     $user = loginDetailsCorrect($username, $password);
 
     if(empty($user)) {
-        header("Location: ../login.php&error=UsernameOrPasswordIncorrect");
+        header("Location: ../login.php?error=UsernameOrPasswordIncorrect");
         exit();
     }
 

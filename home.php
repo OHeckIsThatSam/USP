@@ -46,12 +46,12 @@
                         <div class="user-profilee">
                             <img src="" alt="">
                             <div>
-                                <p>Michael Schofield</p>
+                                <p>Name</p>
                                 <span>Date</span>
                             </div>
                         </div>
                     </div>
-                    <img class="feed-img" src="images/business.jpg" alt="Feed">
+                    <img class="feed-img" src="" alt="">
                     <div class="post-row">
                         <div class="activity-icons">
                         

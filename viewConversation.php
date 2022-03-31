@@ -1,3 +1,26 @@
+<?php
+require_once 'include/database-inc.php';
+require_once 'C:\xampp\htdocs\USP\entities\user.php';
+require_once 'C:\xampp\htdocs\USP\entities\conversation.php';
+require_once 'C:\xampp\htdocs\USP\entities\message.php';
+session_start();
+
+if(is_null($_SESSION['user'])) {
+    header("Location: login.php");
+    exit();
+}
+$user = $_SESSION['user'];
+
+if(isset($_POST['send'])) {
+    createMessage($user->getId(), $_POST['id'], date("Y-m-d h:i:s"), $_POST['message']);
+}
+
+if(is_null($_REQUEST['id'])) {
+    header("Location: conversations.php");
+    exit();
+}
+$conversation = findConversationById($_REQUEST['id']);
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -40,6 +63,25 @@
         <div id="content">
             <section>
                 <h1>View Conversation</h1>
+                <?php
+                $out = "<div id='chatBox'>";
+                $messages = $conversation->getMessages();
+                foreach($messages as &$message) {
+                    if($user->getId() == $message->getSenderId()){
+                        $float = "floatRight";
+                    }else{
+                        $float = "floatLeft";
+                    }
+                    $out .= "<p class='".$float."'>".$message->getContent();
+                }
+                $out .= "</div>";
+                echo($out);
+                ?>
+                <form action="viewConversation.php" method="post">
+                    <input type="hidden" name="id" value="<?php echo($conversation->getId()) ?>">
+                    <input type="text" name="message" placeholder="Message here...">
+                    <input type="submit" value="Send" name="send">
+                </form>
             </section>
         </div>
 

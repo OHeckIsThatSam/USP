@@ -239,3 +239,11 @@ input[name="mail"] {
   color: #626262;
   margin: 20px 0; */
 }
+
+.floatRight {
+  text-align: right;
+}
+
+.floatLeft {
+  text-align: left;
+}

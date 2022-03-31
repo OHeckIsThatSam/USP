@@ -182,10 +182,61 @@ function findAllMessages(){
     require_once 'C:\xampp\htdocs\USP\entities\message.php';
     require 'database.php';
 
-    $query = "SELECT * FROM message ORDER BY timeSent";
+    $query = "SELECT * FROM message ORDER BY DATE(timeSent) DESC";
 
     $stmt = $conn->prepare($query);
     $stmt->execute();
+    $result = $stmt->get_result();
+
+    $messages = [];
+    while ($row = $result->fetch_assoc()) {
+        $message = new Message();
+        $message -> fillByRow($row);
+        $messages[] = $message;
+    }
+    return $messages;
+}
+
+function createMessage($senderId, $conversationId, $timeSent, $content){
+    require_once 'C:\xampp\htdocs\USP\entities\message.php';
+    require 'database.php';
+
+    $query = "INSERT INTO message (senderId, conversationId, timeSent, content) VALUES (?, ?, ?, ?)";
+
+    $stmt = $conn->prepare($query);
+    $stmt->bind_param("iiss", $senderId, $conversationId, $timeSent, $content);
+    $stmt->execute();
+}
+
+function findConversationById($conversationId){
+    require_once 'C:\xampp\htdocs\USP\entities\conversation.php';
+    require 'database.php';
+
+    $query = "SELECT * FROM conversation WHERE id = ?";
+
+    $stmt = $conn->prepare($query);
+    $stmt->bind_param("i", $conversationId);
+    $stmt->execute();
+
+    $result = $stmt->get_result();
+    $row = $result->fetch_assoc();
+
+    $conversation = new Conversation();
+    $conversation->fillByRow($row);
+    $conversation->setMessages(findMessagesByConversationId($conversationId));
+    return $conversation;
+}
+
+function findMessagesByConversationId($conversationId){
+    require_once 'C:\xampp\htdocs\USP\entities\message.php';
+    require 'database.php';
+
+    $query = "SELECT * FROM message WHERE conversationId = ? ORDER BY DATE(timeSent) DESC";
+
+    $stmt = $conn->prepare($query);
+    $stmt->bind_param("i", $conversationId);
+    $stmt->execute();
+
     $result = $stmt->get_result();
 
     $messages = [];
@@ -214,26 +265,9 @@ function findAllUserConversations($userId){
     while ($row = $result->fetch_assoc()) {
         $conversation = new Conversation();
         $conversation->fillByRow($row);
-
-        // Get all the messages with that conversation id
-        $query = "SELECT * FROM message WHERE conversationId = ? ORDER BY timeSent";
-
-        $stmt = $conn->prepare($query);
-        $conversationId = $conversation->getId();
-        $stmt->bind_param("i", $conversationId);
-        $stmt->execute();
-
-        $result = $stmt->get_result();
-
-        $messages = [];
-        while ($row = $result->fetch_assoc()) {
-            $message = new Message();
-            $message -> fillByRow($row);
-            $messages[] = $message;
-        }
         
         // Populate the conversation object with the messages
-        $conversation->setMessages($messages);
+        $conversation->setMessages(findMessagesByConversationId($conversation->getId()));
 
         // Add the conversation to the array
         $conversations[] = $conversation;

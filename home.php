@@ -46,7 +46,7 @@
                         <form action="/action_page.php">
                             <input type="file" id="myFile" name="filename">
                             <button>Submit</button>
-                        </form>
+                        </form> 
             </div>
         <div class="post-conta">
                     <div class="post-row">

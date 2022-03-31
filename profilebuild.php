@@ -26,7 +26,8 @@
                     <label for="usernam">Please enter the username you want:</label> <br>
                     <input name="usernam" type="text"><br>
                     <label for="brief">Please give us a brief about yourself:</label><br>
-                    <input name="brief" type="text"><br>
+                    <!-- <input name="brief" type="text"><br> -->
+                    <textarea name="" id="" cols="32" rows="3"></textarea> <br> <br>
                     <label for="timeline">Please enter some information you would like to appear on your timeline.</label> <br>
                     <input name="timeline" type="text"> <br>
             </form>
@@ -35,10 +36,9 @@
         <p class="Text-here">If you would like a profile picture, please upload this here:</p>
         <form action="/action_page.php">
         <input type="file" id="myFile" name="filename">
-        <button>Submit</button>
         </form>
     </div>
-    <button>Confirm</button>
+        <button class="conu">Confirm</button> <br> <br>
 </div>
 </body>
 </html>

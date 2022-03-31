@@ -223,6 +223,7 @@ input[name="mail"] {
   margin-right: auto;
   background: white;
   width: 50%;
+  margin-bottom: 40px;
 }
 /*------------ home page --------*/
 .floatRight {
@@ -236,9 +237,36 @@ input[name="mail"] {
   margin-right: auto;
   background: white;
   width: 25%;
+  margin-bottom: 15px;
 }
 .textho{
   border: 0;
   outline: 0;
   width: 100%;
+}
+/*--------------- profile build page -------------------*/
+.pro-build{
+  margin-right: auto;
+  margin-left: auto;
+  width: 20%;
+}
+input[name="usernam"]{
+  width: 100%;
+}
+input[name= "brief"]{
+  width: 100%;
+}
+input[name="timeline"]{
+  width: 100%;
+}
+.pictures{
+  text-align: center;
+}
+.conu{
+  margin-left: 620px;
+  margin-top: 15px;
+  font-size: 20px;
+}
+input[type="file"]{
+  margin-right: 120px;
 }

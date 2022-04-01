@@ -1,12 +1,23 @@
 <?php
+require_once 'include/database-inc.php';
 require_once 'entities/user.php';
 session_start();
 
-if(is_null($_SESSION['user'])) {
-    header("Location: login.php");
-    exit();
+if(isset($_REQUEST['userId'])) {
+    $user = findUserById($_REQUEST['userId']);
+} else {
+    if(is_null($_SESSION['user'])) {
+        header("Location: login.php");
+        exit();
+    }
+    $user = $_SESSION['user'];
 }
-$user = $_SESSION['user'];
+
+if(isset($_POST['startConversation'])) { 
+    createConversation($_POST['userId1'], $_POST['userId2']);
+    $conversation = findConversationByUserIds($_POST['userId1'], $_POST['userId2']);
+    header("Location: viewConversation.php?id=". $conversation->getId());
+}
 ?>
 
 <!DOCTYPE html>
@@ -51,11 +62,9 @@ $user = $_SESSION['user'];
             <section>
                 <h1>View Profile</h1>
                 <img id="profilepicture" src="images/profilepicture.jpg" alt="profilepicture">
-                <h2>Your details</h2>
+                <h2><?php echo($user->getFirstName());?> <?php echo($user->getLastName());?></h2>
                 <div id="pc1">
                     <ul id="list1">
-                        <li>First name: <?php echo($user->getFirstName());?></li>
-                        <li>Last name: <?php echo($user->getLastName());?></li>
                         <li>Email: <?php echo($user->getEmail());?></li>
                         <li>Back up email: <?php echo($user->getSecondEmail());?></li>
                     </ul>
@@ -67,7 +76,18 @@ $user = $_SESSION['user'];
                     </form> 
                 </div>
             </section>
-            <a href="editProfile.php">Edit Profile</a>
+            <?php
+            if($user->getId() == $_SESSION['user']->getId()) {
+                echo("<a href='editProfile.php'>Edit Profile</a>");
+            } else {
+                $out = "<form action='viewProfile.php' method='post'>";
+                $out .= "<input type='hidden' name='userId1' value='".$_SESSION['user']->getId()."'>";
+                $out .= "<input type='hidden' name='userId2' value='".$user->getId()."'>";
+                $out .= "<input type='submit' name='startConversation' value='Start Conversation'>";
+                $out .= "</form>";
+                echo($out);
+            }
+            ?>
         </div>
 
         <footer>

@@ -5,6 +5,8 @@ if(isset($_POST['search'])) {
     $inputArray = explode(" ", $_POST['tags']);
     $tags = findTagsByStringArray($inputArray);
     $users = findUsersByTags($tags);
+    // echo(var_dump($users));
+    // echo(var_dump(findUserById(3)));
 }
 ?>
 
@@ -56,11 +58,14 @@ if(isset($_POST['search'])) {
                     </form>
                 </div>
                 <?php
-                $out = "<div>";
-                foreach($users as &$user) {
-                    $out .= "<p>".$user->getFirstName()." ".$user->getLastName();
+                if(isset($users)) {
+                    $out = "<div>";
+                    foreach($users as $user) {
+                        $out .= "<p>".$user->getFirstName()." ".$user->getLastName();
+                        $out .= "<br><a href='viewProfile.php?userId=".$user->getId()."'>View Profile</a>";
+                    }
+                    echo($out);
                 }
-                echo($out);
                 ?>
             </section>
         </div>

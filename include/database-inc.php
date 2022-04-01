@@ -83,10 +83,12 @@ function findUsersByTags($tags){
 
         $result = $stmt->get_result();
         while($row = $result->fetch_assoc()) {
-            $user = findUserById($row);
-            if(!in_array($user, $users)) {
-                $users[] = $user;
-            } 
+            // $users[] = $row;
+            $users[] = findUserById($row);
+            
+            // if(!in_array($user, $users)) {
+            //     $users[] = $user;
+            // } 
         }
     }
     return $users;
@@ -255,6 +257,36 @@ function createMessage($senderId, $conversationId, $timeSent, $content){
     $stmt = $conn->prepare($query);
     $stmt->bind_param("iiss", $senderId, $conversationId, $timeSent, $content);
     $stmt->execute();
+}
+
+function createConversation($userId1, $userId2){
+    require_once 'C:\xampp\htdocs\USP\entities\conversation.php';
+    require 'database.php';
+
+    $query = "INSERT INTO conversation (userId1, userId2) VALUES (?, ?)";
+
+    $stmt = $conn->prepare($query);
+    $stmt->bind_param("ii", $userId1, $userId2);
+    $stmt->execute();
+}
+
+function findConversationByUserIds($userId1, $userId2){
+    require_once 'C:\xampp\htdocs\USP\entities\conversation.php';
+    require 'database.php';
+
+    $query = "SELECT * FROM conversation WHERE userId1 = ? AND userId2 = ?";
+
+    $stmt = $conn->prepare($query);
+    $stmt->bind_param("ii", $userId1, $userId2);
+    $stmt->execute();
+
+    $result = $stmt->get_result();
+    $row = $result->fetch_assoc();
+
+    $conversation = new Conversation();
+    $conversation->fillByRow($row);
+    $conversation->setMessages(findMessagesByConversationId($conversation->getId()));
+    return $conversation;
 }
 
 function findConversationById($conversationId){

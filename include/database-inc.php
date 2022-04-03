@@ -84,14 +84,35 @@ function findUsersByTags($tags){
         $result = $stmt->get_result();
         while($row = $result->fetch_assoc()) {
             // $users[] = $row;
-            $users[] = findUserById($row);
+            $user = findUserById($row['userId']);
             
-            // if(!in_array($user, $users)) {
-            //     $users[] = $user;
-            // } 
+            if(!in_array($user, $users)) {
+                $users[] = $user;
+            } 
         }
     }
     return $users;
+}
+
+function userIsAdmin($userId){
+    require_once 'C:\xampp\htdocs\USP\entities\user.php';
+    require 'database.php';
+
+    $query = "SELECT id FROM user_roles WHERE userId = ? AND roleId = ?";
+
+    $stmt = $conn->prepare($query);
+    $roleId = 1;
+    $stmt->bind_param("ii", $userId, $roleId);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    $row = $result->fetch_assoc();
+
+    if($row == null) {
+        return FALSE;
+    } else {
+        return TRUE;
+    }
 }
 
 // Tag bussiness logic

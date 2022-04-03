@@ -1,4 +1,14 @@
+<?php
+require_once 'include/database-inc.php';
+require_once 'entities/user.php';
+session_start();
 
+if(is_null($_SESSION['user'])) {
+    header("Location: login.php");
+    exit();
+}
+$sessionUser = $_SESSION['user'];
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -26,8 +36,16 @@
                         <li><a href="searchPeople.php">Find People</a></li>
                         <li><a href="conversations.php">Conversations</a></li>
                         <li><a href="viewProfile.php">Profile</a></li>
-                        <li><a href="adminDashboard.php">Admin Dashboard</a></li>
-                        <li><a href="login.php">Login</a></li>
+                        <?php
+                        $out = "";
+                        if(!isset($sessionUser)) {
+                            $out .= "<li><a href='login.php'>Login</a></li>";
+                        } 
+                        if(userIsAdmin($sessionUser->getId())) {
+                            $out .= "<li><a href='adminDashboard.php'>Admin Dashboard</a></li>";
+                        }
+                        echo($out);
+                        ?>
                     </ul>
                 </nav>
                 <div class="ic">

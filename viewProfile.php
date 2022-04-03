@@ -11,6 +11,7 @@ if(isset($_REQUEST['userId'])) {
         exit();
     }
     $user = $_SESSION['user'];
+    $sessionUser = $_SESSION['user'];
 }
 
 if(isset($_POST['startConversation'])) { 
@@ -47,8 +48,16 @@ if(isset($_POST['startConversation'])) {
                         <li><a href="searchPeople.php">Find People</a></li>
                         <li><a href="conversations.php">Conversations</a></li>
                         <li><a href="viewProfile.php">Profile</a></li>
-                        <li><a href="adminDashboard.php">Admin Dashboard</a></li>
-                        <li><a href="login.php">Login</a></li>
+                        <?php
+                        $out = "";
+                        if(!isset($sessionUser)) {
+                            $out .= "<li><a href='login.php'>Login</a></li>";
+                        } 
+                        if(userIsAdmin($sessionUser->getId())) {
+                            $out .= "<li><a href='adminDashboard.php'>Admin Dashboard</a></li>";
+                        }
+                        echo($out);
+                        ?>
                     </ul>
                 </nav>
                 <div class="ic">
@@ -60,9 +69,8 @@ if(isset($_POST['startConversation'])) {
         </div>
         <div id="content">
             <section>
-                <h1>View Profile</h1>
+                <h1><?php echo($user->getFirstName());?> <?php echo($user->getLastName());?></h1>
                 <img id="profilepicture" src="images/profilepicture.jpg" alt="profilepicture">
-                <h2><?php echo($user->getFirstName());?> <?php echo($user->getLastName());?></h2>
                 <div id="pc1">
                     <ul id="list1">
                         <li>Email: <?php echo($user->getEmail());?></li>

@@ -1,12 +1,17 @@
 <?php
 require_once 'include/database-inc.php';
+require_once 'entities/user.php';
+
+session_start();
+
+if(isset($_SESSION['user'])) {
+    $sessionUser = $_SESSION['user'];
+}
 
 if(isset($_POST['search'])) {
     $inputArray = explode(" ", $_POST['tags']);
     $tags = findTagsByStringArray($inputArray);
     $users = findUsersByTags($tags);
-    // echo(var_dump($users));
-    // echo(var_dump(findUserById(3)));
 }
 ?>
 
@@ -37,8 +42,17 @@ if(isset($_POST['search'])) {
                         <li><a href="searchPeople.php">Find People</a></li>
                         <li><a href="conversations.php">Conversations</a></li>
                         <li><a href="viewProfile.php">Profile</a></li>
-                        <li><a href="adminDashboard.php">Admin Dashboard</a></li>
-                        <li><a href="login.php">Login</a></li>
+                        <?php
+                        $out = "";
+                        if(!isset($sessionUser)) {
+                            $out .= "<li><a href='login.php'>Login</a></li>";
+                        } 
+                        if(userIsAdmin($sessionUser->getId())) {
+                            $out .= "<li><a href='adminDashboard.php'>Admin Dashboard</a></li>";
+                        }
+                        echo($out);
+                        ?>
+                        
                     </ul>
                 </nav>
                 <div class="ic">
@@ -57,16 +71,30 @@ if(isset($_POST['search'])) {
                         <input type="submit" name="search" value="search">
                     </form>
                 </div>
+                <div class="searchResults">
                 <?php
                 if(isset($users)) {
-                    $out = "<div>";
+                    $out = "";
                     foreach($users as $user) {
+                        $out .= "<div class='userBlock'>";
                         $out .= "<p>".$user->getFirstName()." ".$user->getLastName();
-                        $out .= "<br><a href='viewProfile.php?userId=".$user->getId()."'>View Profile</a>";
+                        $out .= "<ul>";
+                        $userTags = findAllUserTags($user->getId());
+                        foreach ($tags as $tag) {
+                            if (in_array($tag, $userTags)) {
+                                $out .= "<li>".$tag->getName()."</li>";
+                            }
+                        }
+                        $out .= "</ul>";
+                        $out .= "<a href='viewProfile.php?userId=".$user->getId()."'>View Profile</a>";
+                        $out .= "</div>";
                     }
-                    echo($out);
+                } else {
+                    $out = "No users found.";
                 }
+                echo($out);
                 ?>
+                </div>
             </section>
         </div>
         

@@ -270,3 +270,19 @@ input[name="timeline"]{
 input[type="file"]{
   margin-right: 120px;
 }
+
+/*--------------- Find People Page  -------------------*/
+.searchResults{
+  text-align: center;
+}
+.searchResults ul{
+  list-style: none;
+  padding: 0;
+}
+.userBlock {
+  display: inline-block;
+  border-style: solid;
+  border-width: 2px;
+  padding: 5px;
+  margin: 10px;
+}

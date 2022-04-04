@@ -3,8 +3,11 @@ header {
   /*#c8dbe2*/
   background-color: #172bd2;
 }
-body {
+/* body {
   background-color: #172bd2;
+} */
+body {
+  background-color: #e9eff1;
 }
 footer {
   background-color: #172bd2;
@@ -98,7 +101,7 @@ input[name="secondEmail"] {
 }
 .ic {
   position: relative;
-  top: -300px;
+  top: -230px;
   margin-left: 220px;
   padding-right: 10px;
 }

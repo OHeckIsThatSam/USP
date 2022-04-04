@@ -7,6 +7,7 @@
 body {
   background-color: #e9eff1;
 }
+
 footer {
   background-color: #c8dbe2;
   padding: 10px 23px;
@@ -15,10 +16,12 @@ footer {
   font-style: italic;
   /* margin: 20px 10px 10px 0; */
 }
+
 header {
   display: flex;
   background-color: #c8dbe2;
 }
+
 /*--------------- Navagation -----------------*/
 nav {
   margin: auto auto auto 20px;
@@ -26,16 +29,19 @@ nav {
   display: flex;
   justify-content: center;
 }
+
 nav ul {
   list-style: none;
   display: flex;
   flex-direction: row;
   padding: 0px;
 }
+
 nav ul li {
   padding: 0px;
   border-bottom: none;
 }
+
 nav ul li a {
   float: left;
   display: block;
@@ -46,6 +52,7 @@ nav ul li a {
   font-size: 20px;
   width: auto;
 }
+
 /*--------------- Login page -----------------*/
 input[type="text"] {
   width: 25%;
@@ -57,10 +64,12 @@ input[type="text"] {
   height: 25px;
   margin-bottom: 15px;
 }
+
 #loginContainer,
 #signUpContainer {
   text-align: center;
 }
+
 .Log {
   position: relative;
   text-align: center;
@@ -72,9 +81,11 @@ input[type="text"] {
   font-size: 30px;
   cursor: pointer;
 }
+
 .sizefored {
   font-size: 15px;
 }
+
 /* label {
   margin-left: -19.5%;
 } */
@@ -82,18 +93,22 @@ input[type="text"] {
 body {
   margin: 0;
 }
+
 /*----------------- index page ----------------*/
 img {
   padding: 5px;
   width: 90%;
 }
+
 h1 {
   text-align: center;
 }
+
 /*--------------- search people page ----------------*/
 .topnav {
   text-align: center;
 }
+
 /*---------------- sign up page -------------------*/
 input[name="email"],
 input[name="secondEmail"] {
@@ -106,6 +121,7 @@ input[name="secondEmail"] {
   height: 25px;
   margin-bottom: 15px;
 }
+
 input[name="dateOfBirth"] {
   width: 13%;
   outline: none;
@@ -115,6 +131,7 @@ input[name="dateOfBirth"] {
   transition: all 0.3s ease;
   height: 25px;
 }
+
 /*---------- home page slideshow/ home page -----------------*/
 .slideshow {
   width: 50%;
@@ -123,6 +140,7 @@ input[name="dateOfBirth"] {
   margin-right: auto;
   margin-bottom: 15px;
 }
+
 /* .ic {
   margin-left: auto;
   padding-right: 25px;
@@ -143,19 +161,23 @@ input[name="dateOfBirth"] {
 #signUpprocess {
   text-align: center;
 }
+
 .mentor-quest1,
 .mentor-quest2 {
   padding: 5px;
   margin-left: 100px;
 }
+
 textarea {
   resize: none;
 }
+
 .proof {
   float: right;
   margin-right: 350px;
   margin-top: -170px;
 }
+
 .Mentor-Done {
   /* margin-left: 500px;
   margin-top: 30px; */
@@ -165,43 +187,53 @@ textarea {
   left: 50%;
   top: 90%;
 }
+
 .Text-here {
   width: 100%;
 }
+
 .Next {
   display: inline-block;
   font-size: 20px;
   position: absolute;
   left: 49%;
 }
+
 .ask-ment2 {
   float: right;
   margin-right: 270px;
   margin-top: -214px;
 }
+
 .ask-mentor {
   margin-left: 270px;
 }
+
 .email-men {
   text-align: center;
   margin-top: 10px;
 }
+
 input[name="mail"] {
   width: 20%;
 }
+
 .configure {
   margin-top: 20px;
   font-size: 20px;
 }
+
 .checkb {
   margin-top: 10px;
 }
+
 /*---------Profile Page---------*/
 #profilepicture {
   display: block;
   height: 250px;
   width: 250px;
 }
+
 #pc1 {
   text-align: center;
 }
@@ -210,11 +242,13 @@ input[name="mail"] {
   list-style-type: none;
   padding-left: 0%;
 }
+
 /*------------ home page --------*/
 .post-conta {
   width: 50%;
   display: block
 }
+
 .post-conta {
   background: white;
   color: #323232;
@@ -225,60 +259,73 @@ input[name="mail"] {
   width: 50%;
   margin-bottom: 40px;
 }
+
 /*------------ home page --------*/
 .floatRight {
   text-align: right;
 }
+
 .floatLeft {
   text-align: left;
 }
-.post-input-container{
+
+.post-input-container {
   margin-left: auto;
   margin-right: auto;
   background: white;
   width: 25%;
   margin-bottom: 15px;
 }
-.textho{
+
+.textho {
   border: 0;
   outline: 0;
   width: 100%;
 }
+
 /*--------------- profile build page -------------------*/
-.pro-build{
+.pro-build {
   margin-right: auto;
   margin-left: auto;
   width: 20%;
 }
-input[name="usernam"]{
+
+input[name="usernam"] {
   width: 100%;
 }
-input[name= "brief"]{
+
+input[name="brief"] {
   width: 100%;
 }
-input[name="timeline"]{
+
+input[name="timeline"] {
   width: 100%;
 }
-.pictures{
+
+.pictures {
   text-align: center;
 }
-.conu{
+
+.conu {
   margin-left: 620px;
   margin-top: 15px;
   font-size: 20px;
 }
-input[type="file"]{
+
+input[type="file"] {
   margin-right: 120px;
 }
 
 /*--------------- Find People Page  -------------------*/
-.searchResults{
+.searchResults {
   text-align: center;
 }
-.searchResults ul{
+
+.searchResults ul {
   list-style: none;
   padding: 0;
 }
+
 .userBlock {
   display: inline-block;
   border-style: solid;

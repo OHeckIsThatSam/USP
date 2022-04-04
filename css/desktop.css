@@ -8,7 +8,7 @@ body {
   background-color: #e9eff1;
 }
 footer {
-  background-color: #0f2557;
+  background-color: #50c878;
   padding: 10px 23px;
   color: #000000;
   text-align: center;
@@ -17,7 +17,7 @@ footer {
 }
 header {
   display: flex;
-  background-color: #0f2557;
+  background-color: #50c878;
 }
 /*--------------- Navagation -----------------*/
 nav {
@@ -67,7 +67,7 @@ input[type="text"] {
   border: 2px solid black;
   width: 45%;
   margin: auto;
-  background-color: #0f2557;
+  background-color: #50c878;
   font-weight: bolder;
   font-size: 30px;
   cursor: pointer;

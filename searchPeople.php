@@ -96,7 +96,7 @@ if(isset($_POST['search'])) {
                 ?>
                 </div>
             </section>
-        </div>
+        </div> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
         
 
         <footer>

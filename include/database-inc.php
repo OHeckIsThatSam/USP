@@ -186,6 +186,18 @@ function createUserTag($userId, $tagId){
     }
 }
 
+function removeUserTag($userId, $tagId){
+    require 'database.php';
+
+    if(userTagExists($userId, $tagId)) {
+        $query = "DELETE FROM user_tags WHERE userId = ? AND tagId = ?";
+
+        $stmt = $conn->prepare($query);
+        $stmt->bind_param("ii", $userId, $tagId);
+        $stmt->execute();
+    }
+}
+
 function findAllUserTags($userId){
     require_once 'C:\xampp\htdocs\USP\entities\tag.php';    
     require 'database.php';

@@ -64,14 +64,16 @@ $sessionUser = $_SESSION['user'];
 
                 $conversations = findAllUserConversations($sessionUser->getId());
                 
-                $out = "<div>";
+                $out = "<div class='searchResults'>";
                 foreach($conversations as &$conversation) {
                     if($sessionUser->getId() == $conversation->getUserId1()) {
                         $otherUser = findUserById($conversation->getUserId2());
                     } else {
                         $otherUser = findUserById($conversation->getUserId1());
                     }
-                    $out .= "<div><h4>".$otherUser->getFirstName()." ".$otherUser->getLastName()."</h4>";
+                    $out .= "<div class='conversationBlock'><h4>".$otherUser->getFirstName()." ".$otherUser->getLastName()."</h4>";
+                    $messages = findMessagesByConversationId($conversation->getId());
+                    $out .= "<p>".end($messages)->getContent()."</p>";
                     $out .= "<a href=\"viewConversation.php?id=".$conversation->getId()."\">View Conversation</a></div>";
                 }
                 $out .= "</div>";

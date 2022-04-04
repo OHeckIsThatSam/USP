@@ -9,10 +9,16 @@ if(is_null($_SESSION['user'])) {
 }
 $sessionUser = $_SESSION['user'];
 
-if(isset( $_POST['addTag'] )) {
-    $userId = $user->getId();
+if(isset($_POST['addTag'])) {
+    $userId = $sessionUser->getId();
     $tagId = $_POST['tagId'];
     createUserTag($userId, $tagId);
+}
+
+if(isset($_POST['removeTag'])) {
+    $userId = $sessionUser->getId();
+    $tagId = $_POST['removeTagId'];
+    removeUserTag($userId, $tagId);
 }
 ?>
 
@@ -74,7 +80,11 @@ if(isset( $_POST['addTag'] )) {
 
                 $out = "";
                 foreach($tags as &$tag) {
-                    $out .= "<li>".$tag->getName()."</li>";
+                    $out .= "<li>".$tag->getName();
+                    $out .= "<form action='editProfile.php' method='post'>";
+                    $out .= "<input type='hidden' name='removeTagId' value='".$tag->getId()."'>";
+                    $out .= "<input type='submit' name='removeTag' value='Remove'>";
+                    $out .= "</form></li>";
                 }
                 echo($out);
                 ?>

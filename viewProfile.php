@@ -11,11 +11,13 @@ if(isset($_REQUEST['userId'])) {
         exit();
     }
     $user = $_SESSION['user'];
-    $sessionUser = $_SESSION['user'];
 }
+$sessionUser = $_SESSION['user'];
 
-if(isset($_POST['startConversation'])) { 
-    createConversation($_POST['userId1'], $_POST['userId2']);
+if(isset($_POST['startConversation'])) {
+    if (!conversationExists($_POST['userId1'], $_POST['userId2'])) {
+        createConversation($_POST['userId1'], $_POST['userId2']);
+    }
     $conversation = findConversationByUserIds($_POST['userId1'], $_POST['userId2']);
     header("Location: viewConversation.php?id=". $conversation->getId());
 }

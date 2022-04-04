@@ -9,7 +9,7 @@ body {
 }
 
 footer {
-  background-color: #c8dbe2;
+  background-color: #0f2557;
   padding: 10px 23px;
   color: #000000;
   text-align: center;
@@ -19,7 +19,7 @@ footer {
 
 header {
   display: flex;
-  background-color: #c8dbe2;
+  background-color: #0f2557;
 }
 
 /*--------------- Navagation -----------------*/
@@ -76,7 +76,7 @@ input[type="text"] {
   border: 2px solid black;
   width: 45%;
   margin: auto;
-  background-color: #c8dbe2;
+  background-color: #0f2557;
   font-weight: bolder;
   font-size: 30px;
   cursor: pointer;
@@ -327,6 +327,15 @@ input[type="file"] {
 }
 
 .userBlock {
+  display: inline-block;
+  border-style: solid;
+  border-width: 2px;
+  padding: 5px;
+  margin: 10px;
+}
+
+/*---------- View All Conversations Page ------------*/
+.conversationBlock {
   display: inline-block;
   border-style: solid;
   border-width: 2px;

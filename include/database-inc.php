@@ -186,6 +186,18 @@ function createUserTag($userId, $tagId){
     }
 }
 
+function removeUserTag($userId, $tagId){
+    require 'database.php';
+
+    if(userTagExists($userId, $tagId)) {
+        $query = "DELETE FROM user_tags WHERE userId = ? AND tagId = ?";
+
+        $stmt = $conn->prepare($query);
+        $stmt->bind_param("ii", $userId, $tagId);
+        $stmt->execute();
+    }
+}
+
 function findAllUserTags($userId){
     require_once 'C:\xampp\htdocs\USP\entities\tag.php';    
     require 'database.php';
@@ -291,14 +303,34 @@ function createConversation($userId1, $userId2){
     $stmt->execute();
 }
 
+function conversationExists($userId1, $userId2){
+    require_once 'C:\xampp\htdocs\USP\entities\conversation.php';
+    require 'database.php';
+
+    $query = "SELECT * FROM conversation WHERE userId1 = ? AND userId2 = ? OR userId1= ? AND userId2 = ?";
+
+    $stmt = $conn->prepare($query);
+    $stmt->bind_param("iiii", $userId1, $userId2, $userId2, $userId1);
+    $stmt->execute();
+
+    $result = $stmt->get_result();
+    $row = $result->fetch_assoc();
+
+    if($row == null) {
+        return FALSE;
+    }else {
+        return TRUE;
+    }
+}
+
 function findConversationByUserIds($userId1, $userId2){
     require_once 'C:\xampp\htdocs\USP\entities\conversation.php';
     require 'database.php';
 
-    $query = "SELECT * FROM conversation WHERE userId1 = ? AND userId2 = ?";
+    $query = "SELECT * FROM conversation WHERE userId1 = ? AND userId2 = ? OR userId1 = ? AND userId2 = ?";
 
     $stmt = $conn->prepare($query);
-    $stmt->bind_param("ii", $userId1, $userId2);
+    $stmt->bind_param("iiii", $userId1, $userId2, $userId2, $userId1);
     $stmt->execute();
 
     $result = $stmt->get_result();

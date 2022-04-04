@@ -98,7 +98,7 @@ if(isset($_POST['startConversation'])) {
                 echo($out);
             }
             ?>
-        </div>
+        </div> <br>
 
         <footer>
             <div>

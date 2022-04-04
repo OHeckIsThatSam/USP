@@ -286,3 +286,12 @@ input[type="file"]{
   padding: 5px;
   margin: 10px;
 }
+
+/*---------- View All Conversations Page ------------*/
+.conversationBlock {
+  display: inline-block;
+  border-style: solid;
+  border-width: 2px;
+  padding: 5px;
+  margin: 10px;
+}

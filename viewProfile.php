@@ -1,12 +1,26 @@
 <?php
+require_once 'include/database-inc.php';
 require_once 'entities/user.php';
 session_start();
 
-if(is_null($_SESSION['user'])) {
-    header("Location: login.php");
-    exit();
+if(isset($_REQUEST['userId'])) {
+    $user = findUserById($_REQUEST['userId']);
+} else {
+    if(is_null($_SESSION['user'])) {
+        header("Location: login.php");
+        exit();
+    }
+    $user = $_SESSION['user'];
 }
-$user = $_SESSION['user'];
+$sessionUser = $_SESSION['user'];
+
+if(isset($_POST['startConversation'])) {
+    if (!conversationExists($_POST['userId1'], $_POST['userId2'])) {
+        createConversation($_POST['userId1'], $_POST['userId2']);
+    }
+    $conversation = findConversationByUserIds($_POST['userId1'], $_POST['userId2']);
+    header("Location: viewConversation.php?id=". $conversation->getId());
+}
 ?>
 
 <!DOCTYPE html>
@@ -36,8 +50,16 @@ $user = $_SESSION['user'];
                         <li><a href="searchPeople.php">Find People</a></li>
                         <li><a href="conversations.php">Conversations</a></li>
                         <li><a href="viewProfile.php">Profile</a></li>
-                        <li><a href="adminDashboard.php">Admin Dashboard</a></li>
-                        <li><a href="login.php">Login</a></li>
+                        <?php
+                        $out = "";
+                        if(!isset($sessionUser)) {
+                            $out .= "<li><a href='login.php'>Login</a></li>";
+                        } 
+                        if(userIsAdmin($sessionUser->getId())) {
+                            $out .= "<li><a href='adminDashboard.php'>Admin Dashboard</a></li>";
+                        }
+                        echo($out);
+                        ?>
                     </ul>
                 </nav>
                 <div class="ic">
@@ -49,20 +71,33 @@ $user = $_SESSION['user'];
         </div>
         <div id="content">
             <section>
-                <h1>View Profile</h1>
+                <h1><?php echo($user->getFirstName());?> <?php echo($user->getLastName());?></h1>
                 <img id="profilepicture" src="images/profilepicture.jpg" alt="profilepicture">
-                <h2>Your details</h2>
                 <div id="pc1">
                     <ul id="list1">
-                        <li>First name: <?php echo($user->getFirstName());?></li>
-                        <li>Last name: <?php echo($user->getLastName());?></li>
                         <li>Email: <?php echo($user->getEmail());?></li>
                         <li>Back up email: <?php echo($user->getSecondEmail());?></li>
                     </ul>
 
-                    <a href="editProfile.php">Edit Profile</a>
+                    <form action="viewProfile.php" method="text">
+                    <label for="goalIPT">Input a goal you have achieved here:</label><br>
+                    <input type="text" id="goalIPT" name="goalIPT" value=""><br>
+                    <input type="submit" value="Submit">
+                    </form> 
                 </div>
             </section>
+            <?php
+            if($user->getId() == $_SESSION['user']->getId()) {
+                echo("<a href='editProfile.php'>Edit Profile</a>");
+            } else {
+                $out = "<form action='viewProfile.php' method='post'>";
+                $out .= "<input type='hidden' name='userId1' value='".$_SESSION['user']->getId()."'>";
+                $out .= "<input type='hidden' name='userId2' value='".$user->getId()."'>";
+                $out .= "<input type='submit' name='startConversation' value='Start Conversation'>";
+                $out .= "</form>";
+                echo($out);
+            }
+            ?>
         </div>
 
         <footer>

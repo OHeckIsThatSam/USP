@@ -57,22 +57,6 @@ input[type="text"] {
   height: 25px;
   margin-bottom: 15px;
 }
-/* input[type="submit"] {
-  background-color: grey;
-  color: white;
-  cursor: pointer;
-  text-align: center;
-  border: 2px solid black;
-  width: 20%;
-  margin: auto;
-  font-weight: bolder;
-  font-size: 25px;
-  cursor: pointer;
-  display: block;
-  padding-right: 20px;
-  text-decoration: none;
-  margin-top: 20px;
-} */
 #loginContainer,
 #signUpContainer {
   text-align: center;
@@ -192,11 +176,11 @@ textarea {
 }
 .ask-ment2 {
   float: right;
-  margin-right: 20px;
-  margin-top: -210px;
+  margin-right: 270px;
+  margin-top: -214px;
 }
 .ask-mentor {
-  margin-left: 20px;
+  margin-left: 270px;
 }
 .email-men {
   text-align: center;
@@ -239,6 +223,7 @@ input[name="mail"] {
   margin-right: auto;
   background: white;
   width: 50%;
+  margin-bottom: 40px;
 }
 /*------------ home page --------*/
 .floatRight {
@@ -252,9 +237,61 @@ input[name="mail"] {
   margin-right: auto;
   background: white;
   width: 25%;
+  margin-bottom: 15px;
 }
 .textho{
   border: 0;
   outline: 0;
   width: 100%;
+}
+/*--------------- profile build page -------------------*/
+.pro-build{
+  margin-right: auto;
+  margin-left: auto;
+  width: 20%;
+}
+input[name="usernam"]{
+  width: 100%;
+}
+input[name= "brief"]{
+  width: 100%;
+}
+input[name="timeline"]{
+  width: 100%;
+}
+.pictures{
+  text-align: center;
+}
+.conu{
+  margin-left: 620px;
+  margin-top: 15px;
+  font-size: 20px;
+}
+input[type="file"]{
+  margin-right: 120px;
+}
+
+/*--------------- Find People Page  -------------------*/
+.searchResults{
+  text-align: center;
+}
+.searchResults ul{
+  list-style: none;
+  padding: 0;
+}
+.userBlock {
+  display: inline-block;
+  border-style: solid;
+  border-width: 2px;
+  padding: 5px;
+  margin: 10px;
+}
+
+/*---------- View All Conversations Page ------------*/
+.conversationBlock {
+  display: inline-block;
+  border-style: solid;
+  border-width: 2px;
+  padding: 5px;
+  margin: 10px;
 }

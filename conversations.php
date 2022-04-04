@@ -7,7 +7,7 @@ if(is_null($_SESSION['user'])) {
     header("Location: login.php");
     exit();
 }
-$user = $_SESSION['user'];
+$sessionUser = $_SESSION['user'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -36,8 +36,16 @@ $user = $_SESSION['user'];
                         <li><a href="searchPeople.php">Find People</a></li>
                         <li><a href="conversations.php">Conversations</a></li>
                         <li><a href="viewProfile.php">Profile</a></li>
-                        <li><a href="adminDashboard.php">Admin Dashboard</a></li>
-                        <li><a href="login.php">Login</a></li>
+                        <?php
+                        $out = "";
+                        if(!isset($sessionUser)) {
+                            $out .= "<li><a href='login.php'>Login</a></li>";
+                        } 
+                        if(userIsAdmin($sessionUser->getId())) {
+                            $out .= "<li><a href='adminDashboard.php'>Admin Dashboard</a></li>";
+                        }
+                        echo($out);
+                        ?>
                     </ul>
                 </nav>
                 <div class="ic">
@@ -54,16 +62,18 @@ $user = $_SESSION['user'];
                 require_once 'C:\xampp\htdocs\USP\entities\conversation.php';
                 require_once 'C:\xampp\htdocs\USP\entities\message.php';
 
-                $conversations = findAllUserConversations($user->getId());
+                $conversations = findAllUserConversations($sessionUser->getId());
                 
-                $out = "<div>";
+                $out = "<div class='searchResults'>";
                 foreach($conversations as &$conversation) {
-                    if($user->getId() == $conversation->getUserId1()) {
+                    if($sessionUser->getId() == $conversation->getUserId1()) {
                         $otherUser = findUserById($conversation->getUserId2());
                     } else {
                         $otherUser = findUserById($conversation->getUserId1());
                     }
-                    $out .= "<div><h4>".$otherUser->getFirstName()." ".$otherUser->getFirstName()."</h4>";
+                    $out .= "<div class='conversationBlock'><h4>".$otherUser->getFirstName()." ".$otherUser->getLastName()."</h4>";
+                    $messages = findMessagesByConversationId($conversation->getId());
+                    $out .= "<p>".end($messages)->getContent()."</p>";
                     $out .= "<a href=\"viewConversation.php?id=".$conversation->getId()."\">View Conversation</a></div>";
                 }
                 $out .= "</div>";

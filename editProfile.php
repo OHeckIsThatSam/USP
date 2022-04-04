@@ -7,12 +7,18 @@ if(is_null($_SESSION['user'])) {
     header("Location: login.php");
     exit();
 }
-$user = $_SESSION['user'];
+$sessionUser = $_SESSION['user'];
 
-if(isset( $_POST['addTag'] )) {
-    $userId = $user->getId();
+if(isset($_POST['addTag'])) {
+    $userId = $sessionUser->getId();
     $tagId = $_POST['tagId'];
     createUserTag($userId, $tagId);
+}
+
+if(isset($_POST['removeTag'])) {
+    $userId = $sessionUser->getId();
+    $tagId = $_POST['removeTagId'];
+    removeUserTag($userId, $tagId);
 }
 ?>
 
@@ -43,8 +49,16 @@ if(isset( $_POST['addTag'] )) {
                         <li><a href="searchPeople.php">Find People</a></li>
                         <li><a href="conversations.php">Conversations</a></li>
                         <li><a href="viewProfile.php">Profile</a></li>
-                        <li><a href="adminDashboard.php">Admin Dashboard</a></li>
-                        <li><a href="login.php">Login</a></li>
+                        <?php
+                        $out = "";
+                        if(!isset($sessionUser)) {
+                            $out .= "<li><a href='login.php'>Login</a></li>";
+                        } 
+                        if(userIsAdmin($sessionUser->getId())) {
+                            $out .= "<li><a href='adminDashboard.php'>Admin Dashboard</a></li>";
+                        }
+                        echo($out);
+                        ?>
                     </ul>
                 </nav>
                 <div class="ic">
@@ -61,12 +75,16 @@ if(isset( $_POST['addTag'] )) {
                 <h3>Your tags</h3>
                 <ul id="tagList">
                 <?php
-                $userId = $user->getId();
+                $userId = $sessionUser->getId();
                 $tags = findAllUserTags($userId);
 
                 $out = "";
                 foreach($tags as &$tag) {
-                    $out .= "<li>".$tag->getName()."</li>";
+                    $out .= "<li>".$tag->getName();
+                    $out .= "<form action='editProfile.php' method='post'>";
+                    $out .= "<input type='hidden' name='removeTagId' value='".$tag->getId()."'>";
+                    $out .= "<input type='submit' name='removeTag' value='Remove'>";
+                    $out .= "</form></li>";
                 }
                 echo($out);
                 ?>

@@ -1,12 +1,13 @@
 header {
   /* display: flex; */
-  background-color: #c8dbe2;
+  /*#c8dbe2*/
+  background-color: #0f2557;
 }
 body {
-  background-color: #e9eff1;
+  background-color: #0f2557;
 }
 footer {
-  background-color: #c8dbe2;
+  background-color: #0f2557;
   padding: 10px 23px;
   color: #000;
   text-align: center;
@@ -83,7 +84,7 @@ input[type="text"] {
   border: 2px solid black;
   width: 45%;
   margin: auto;
-  background-color: #c8dbe2;
+  background-color: #0f2557;
   font-weight: bolder;
   font-size: 30px;
   cursor: pointer;
@@ -131,7 +132,7 @@ input[name="secondEmail"] {
   margin-left: 115px;
   padding-right: 10px;
   width: 150px;
-  background-color: #c8dbe2;
+  background-color: #0f2557;
 
 }
 .ask-mentor{

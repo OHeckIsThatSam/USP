@@ -83,7 +83,7 @@ $sessionUser = $_SESSION['user'];
                             <input type="submit" value="SignUp" name="submit"> <br>
                     </form>
                 </div>
-            </section>
+            </section> <br>
         </div>
         <script>
             function password() {

@@ -17,7 +17,7 @@ $sessionUser = $_SESSION['user'];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
     <link rel="stylesheet" href="css/mobile.css">
-    <link rel="stylesheet" media="only screen and (min-width:720px)" href="css/desktop.css">
+    <link rel="stylesheet" media="only screen and (min-width:720px)" href="css/desktop.css"> 
     <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> -->
     <link rel="shortcut icon" href="images/logoBlack.png" type="image/x-icon" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -60,6 +60,21 @@ $sessionUser = $_SESSION['user'];
                 <h1>Admin Dashboard</h1>
             </section>
         </div>
+        <div class="lefts">
+            <p>List Of flagged Accounts</p>
+            <textarea name="" id="" cols="30" rows="7"></textarea>
+        </div>
+
+        <div class="rights" style="text-align:right">
+            <p>Chat Logs:</p>
+            <textarea name="" id="" cols="30" rows="7"></textarea>
+        </div>
+
+        <div class="Violation">
+            <p>The violation</p>
+            <textarea name="" id="" cols="30" rows="7"></textarea>
+        </div>
+        <button>Block Account</button> <br> <br>
 
         <footer>
             <div>

@@ -61,20 +61,20 @@ $sessionUser = $_SESSION['user'];
             </section>
         </div>
         <div class="lefts">
-            <p>List Of flagged Accounts</p>
+            <p class="lists">List Of flagged Accounts</p>
             <textarea name="" id="" cols="30" rows="7"></textarea>
         </div>
 
-        <div class="rights" style="text-align:right">
-            <p>Chat Logs:</p>
+        <div class="rights">
+            <p class="chats">Chat Logs:</p>
             <textarea name="" id="" cols="30" rows="7"></textarea>
         </div>
 
         <div class="Violation">
-            <p>The violation</p>
+            <p class="viol">The violation</p>
             <textarea name="" id="" cols="30" rows="7"></textarea>
         </div>
-        <button>Block Account</button> <br> <br>
+        <button class="blocks">Block Account</button> <br> <br>
 
         <footer>
             <div>

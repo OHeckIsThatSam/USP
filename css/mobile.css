@@ -178,3 +178,25 @@ label{
   width: 100%;
   margin-bottom: 150px;
 }
+/*--------------- profile buil page -------------*/
+input[name="usernam"] {
+  width: 66%;
+}
+
+input[name="brief"] {
+  width: 100%;
+}
+.pictures {
+  text-align: center;
+}
+
+.conu {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 25px;
+}
+
+input[type="file"] {
+  margin-right: 90px;
+}

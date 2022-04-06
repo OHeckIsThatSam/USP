@@ -296,17 +296,12 @@ input[name="mail"] {
 }
 
 input[name="usernam"] {
-  width: 100%;
+  width: 99%;
 }
 
 input[name="brief"] {
   width: 100%;
 }
-
-input[name="timeline"] {
-  width: 100%;
-}
-
 .pictures {
   text-align: center;
 }

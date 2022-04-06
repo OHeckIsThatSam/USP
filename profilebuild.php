@@ -23,13 +23,13 @@
         <h1>Profile Build</h1>
         <div class="pro-build">
             <form action="build" method="post">
-                    <label for="usernam">Please enter the username you want:</label> <br>
-                    <input name="usernam" type="text"><br>
+                    <label for="usernam">Please enter the username you want:</label> <br> 
+                    <input name="usernam" type="text"><br> <br>
                     <label for="brief">Please give us a brief about yourself:</label><br>
                     <!-- <input name="brief" type="text"><br> -->
-                    <textarea name="" id="" cols="32" rows="3"></textarea> <br> <br>
+                    <textarea name="" id="" cols="32" rows="3"></textarea> <br> <br> <br>
                     <label for="timeline">Please enter some information you would like to appear on your timeline.</label> <br>
-                    <input name="timeline" type="text"> <br>
+                    <textarea name="" id="" cols="32" rows="3"></textarea><br> <br>
             </form>
         </div>
      <div class="pictures">
@@ -37,7 +37,7 @@
         <form action="/action_page.php">
         <input type="file" id="myFile" name="filename">
         </form>
-    </div> <br>
+    </div> <br> <br> <br>
         <button class="conu">Confirm</button> <br> <br>
 </div>
 </body>

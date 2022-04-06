@@ -48,11 +48,11 @@ $sessionUser = $_SESSION['user'];
                         ?>
                     </ul>
                 </nav>
-                <div class="ic">
+                <!-- <div class="ic">
                 <i class="fa fa-comments-o" style="font-size:35px"></i>
                 <i class="fa fa-user-circle" style="font-size:35px"></i>
                 <i class="fa fa-user-times" style="font-size:35px"></i>
-                </div>
+                </div> -->
             </header>
         </div>
         <div id="content">
@@ -73,7 +73,7 @@ $sessionUser = $_SESSION['user'];
         <div class="Violation">
             <p class="viol">The violation</p>
             <textarea name="" id="" cols="30" rows="7"></textarea>
-        </div>
+        </div> <br>
         <button class="blocks">Block Account</button> <br> <br>
 
         <footer>

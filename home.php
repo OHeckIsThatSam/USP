@@ -65,9 +65,9 @@ $sessionUser = $_SESSION['user'];
                         <textarea class="textho" rows="3" placeholder="What's your thoughts?"></textarea>
                         <form action="/action_page.php">
                             <input type="file" id="myFile" name="filename">
-                            <button>Submit</button>
+                            <button class="submitted">Submit</button>
                         </form> 
-            </div>
+            </div> <br> <br>
         <div class="post-conta">
                     <div class="post-row">
                         <div class="user-profilee">
@@ -84,7 +84,7 @@ $sessionUser = $_SESSION['user'];
                         
                         </div>
                     </div>
-                </div>
+                </div> <br>
         <footer>
             <div>
                 <a href="#">Contact/Find Us</a>

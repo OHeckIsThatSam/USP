@@ -282,6 +282,11 @@ input[name="mail"] {
   outline: 0;
   width: 100%;
 }
+.submitted{
+  position: absolute;
+  margin-left: 262px;
+  margin-top: -22px;
+}
 
 /*--------------- profile build page -------------------*/
 .pro-build {

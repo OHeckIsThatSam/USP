@@ -37,7 +37,7 @@
         <form action="/action_page.php">
         <input type="file" id="myFile" name="filename">
         </form>
-    </div>
+    </div> <br>
         <button class="conu">Confirm</button> <br> <br>
 </div>
 </body>

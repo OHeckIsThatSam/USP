@@ -31,6 +31,7 @@ require_once 'include/database.php'
                         <li><a href="viewProfile.php">Profile</a></li>
                         <li><a href="adminDashboard.php">Admin Dashboard</a></li>
                         <li><a href="login.php">Login</a></li>
+                        <li><a href="index.php">LogOut</a></li>
                     </ul>
                 </nav>
                 <div class="ic">

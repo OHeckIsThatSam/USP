@@ -107,7 +107,7 @@ if(isset($_POST['removeTag'])) {
                 <input type="submit" value="Add" name="addTag">
                 </form>
             </section>
-        </div>
+        </div> <br> <br><br><br><br><br><br><br>
 
         <footer>
             <div>

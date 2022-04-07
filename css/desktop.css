@@ -132,6 +132,15 @@ input[name="dateOfBirth"] {
   transition: all 0.3s ease;
   height: 25px;
 }
+input[name="password"]{
+  width: 25%;
+  outline: none;
+  font-size: 15px;
+  border: 1px solid #a8a8a8;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  height: 25px;
+}
 
 /*---------- home page slideshow/ home page -----------------*/
 .slideshow {

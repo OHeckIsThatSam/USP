@@ -44,7 +44,7 @@
                         <label for="username">Username:</label><br>
                         <input name="username" type="text" class="input"><br>
                         <label for="password">Password:</label><br>
-                        <input name="password" type="password" class="input"><br>
+                        <input name="password" type="password" class="input"><br> <br> 
                         <input type="submit" value="Login" name="submit">
                     </form> <br>
                     <a href="signUp.php">Not got an account? Click here to sign up.</a>

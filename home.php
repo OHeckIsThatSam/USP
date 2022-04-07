@@ -68,7 +68,8 @@ $sessionUser = $_SESSION['user'];
                             <input type="file" id="myFile" name="filename">
                             <button class="submitted">Submit</button>
                         </form> 
-            </div> <br> <br> <br><br><br><br><br><br><br><br>
+            </div>
+            <br> <br> <br><br><br><br><br><br><br><br>
         <footer>
             <div>
                 <a href="#">Contact/Find Us</a>

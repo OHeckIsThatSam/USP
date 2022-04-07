@@ -68,24 +68,7 @@ $sessionUser = $_SESSION['user'];
                             <input type="file" id="myFile" name="filename">
                             <button class="submitted">Submit</button>
                         </form> 
-            </div> <br> <br>
-        <div class="post-conta">
-                    <div class="post-row">
-                        <div class="user-profilee">
-                            <img src="" alt="">
-                            <div>
-                                <p>Name</p>
-                                <span>Date</span>
-                            </div>
-                        </div>
-                    </div>
-                    <img class="feed-img" src="" alt="">
-                    <div class="post-row">
-                        <div class="activity-icons">
-                        
-                        </div>
-                    </div>
-                </div> <br>
+            </div> <br> <br> <br><br><br><br><br><br><br><br>
         <footer>
             <div>
                 <a href="#">Contact/Find Us</a>

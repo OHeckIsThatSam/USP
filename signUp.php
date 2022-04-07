@@ -33,10 +33,10 @@ $sessionUser = $_SESSION['user'];
                 </div> <br>
                 <nav>
                     <ul>
-                        <li><a href="home.php">Home</a></li>
+                        <!-- <li><a href="home.php">Home</a></li>
                         <li><a href="searchPeople.php">Find People</a></li>
                         <li><a href="conversations.php">Conversations</a></li>
-                        <li><a href="viewProfile.php">Profile</a></li>
+                        <li><a href="viewProfile.php">Profile</a></li> -->
                         <?php
                         $out = "";
                         if(!isset($sessionUser)) {

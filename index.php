@@ -45,6 +45,7 @@
                 
             </section>
         </div>
+        
         <div class="con">
             <img class="slideshow" name="slideshow"  alt="slideshow of photos "width="500" height="400"  />
         </div>

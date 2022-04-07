@@ -33,10 +33,10 @@ $sessionUser = $_SESSION['user'];
                 </div> <br>
                 <nav>
                     <ul>
-                        <li><a href="home.php">Home</a></li>
+                        <!-- <li><a href="home.php">Home</a></li>
                         <li><a href="searchPeople.php">Find People</a></li>
                         <li><a href="conversations.php">Conversations</a></li>
-                        <li><a href="viewProfile.php">Profile</a></li>
+                        <li><a href="viewProfile.php">Profile</a></li> -->
                         <?php
                         $out = "";
                         if(!isset($sessionUser)) {
@@ -77,10 +77,10 @@ $sessionUser = $_SESSION['user'];
                             <input name="address" type="text" class="input"><br>
                             <label for="password">Password:</label><br>
                             <input type="password" name="password" id="passinput" class="inputpass"><br><br>
-                            <label for="dateOfBirth">Date Of Birth:</label><br>
-                            <input name="dateOfBirth" type="date" class="input"><br>
+                            <label for="dateOfBirth">Date Of Birth:</label><br> 
+                            <input name="dateOfBirth" type="date" class="input"><br> <br>
                             <input type="checkbox" onclick="password()">Show Password<br><br>
-                            <input type="submit" value="SignUp" name="submit"> <br>
+                            <input type="submit" value="SignUp" name="submit"> <br> <br>
                     </form>
                 </div>
             </section> <br>

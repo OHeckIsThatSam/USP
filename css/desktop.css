@@ -9,7 +9,7 @@ body {
 }
 
 footer {
-  background-color: #B8C0D9;
+  background-color: #172bd2;
   padding: 10px 23px;
   color: #000000;
   text-align: center;
@@ -19,7 +19,7 @@ footer {
 
 header {
   display: flex;
-  background-color: #B8C0D9;
+  background-color: #172bd2;
 }
 
 /*--------------- Navagation -----------------*/
@@ -282,11 +282,6 @@ input[name="mail"] {
   outline: 0;
   width: 100%;
 }
-.submitted{
-  position: absolute;
-  margin-left: 262px;
-  margin-top: -22px;
-}
 
 /*--------------- profile build page -------------------*/
 .pro-build {
@@ -296,12 +291,17 @@ input[name="mail"] {
 }
 
 input[name="usernam"] {
-  width: 99%;
+  width: 100%;
 }
 
 input[name="brief"] {
   width: 100%;
 }
+
+input[name="timeline"] {
+  width: 100%;
+}
+
 .pictures {
   text-align: center;
 }
@@ -341,31 +341,4 @@ input[type="file"] {
   border-width: 2px;
   padding: 5px;
   margin: 10px;
-}
-/*------------------ admin dashboard --------------*/
-.lists{
-  margin-bottom: 5px;
-}
-.lefts{
-  margin-left: 300px;
-}
-.rights{
-  margin-left: 650px;
-  margin-top: -156px;
-}
-.chats{
-  margin-bottom: 5px;
-  margin-right: 170px;
-}
-.viol{
-  margin-bottom: 5px;
-}
-.Violation{
-  margin-left: 300px;
-  margin-top: 40px;
-}
-.blocks{
-  position: absolute;
-  margin-left: 730px;
-  margin-top: -75px;
 }

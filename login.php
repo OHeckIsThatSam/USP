@@ -48,7 +48,7 @@
                         <input type="submit" value="Login" name="submit">
                     </form> <br>
                     <a href="signUp.php">Not got an account? Click here to sign up.</a> 
-                <div> <br> <br>
+                <div> <br> <br> <br>
                 
             </section>
         </div>

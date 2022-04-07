@@ -43,14 +43,6 @@
             <section>
                 <h1>Welcome</h1>
                 
-                <div>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor neque odio, consequat tincidunt augue lobortis vel. 
-                    Curabitur quis metus mauris. Donec urna nunc, ornare quis ullamcorper quis, ultricies sed justo. 
-                    Sed lectus augue, rhoncus vitae feugiat ac, molestie nec velit. Integer aliquet eu dolor vitae eleifend. 
-                    Fusce aliquet risus sit amet sapien placerat, quis imperdiet augue maximus. Vivamus pretium urna ac commodo finibus. 
-                    Suspendisse lobortis neque dui, quis tempor nisi vulputate eget. Integer at nisl eget ligula luctus sodales. 
-                    Nam ac ex luctus, auctor arcu id, pulvinar purus.
-                </div>
             </section>
         </div>
         <div class="con">

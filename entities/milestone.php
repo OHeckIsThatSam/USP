@@ -52,7 +52,7 @@ class milestone {
     }
 
     public function getCourse(){
-        return $this->course
+        return $this->course;
     }
 
     public function setCourse(){

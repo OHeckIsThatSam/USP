@@ -101,7 +101,13 @@ input[name="secondEmail"] {
 }
 .ic {
   position: relative;
-  top: -230px;
+  top: -220px;
+  margin-left: 220px;
+  padding-right: 10px;
+}
+.icoons{
+  position: relative;
+  top: -150px;
   margin-left: 220px;
   padding-right: 10px;
 }

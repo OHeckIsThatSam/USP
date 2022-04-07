@@ -47,7 +47,7 @@
                         <input name="password" type="text" class="input"><br>
                         <input type="submit" value="Login" name="submit">
                     </form> <br>
-                    <a href="signUp.php">Not got an account? Click here to sign up.</a> 
+                    <a href="signUp.php">Not got an account? Click here to sign up.</a>
                 <div> <br> <br> <br>
                 
             </section>

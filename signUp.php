@@ -77,10 +77,10 @@ $sessionUser = $_SESSION['user'];
                             <input name="address" type="text" class="input"><br>
                             <label for="password">Password:</label><br>
                             <input type="password" name="password" id="passinput" class="inputpass"><br><br>
-                            <label for="dateOfBirth">Date Of Birth:</label><br>
-                            <input name="dateOfBirth" type="date" class="input"><br>
+                            <label for="dateOfBirth">Date Of Birth:</label><br> 
+                            <input name="dateOfBirth" type="date" class="input"><br> <br>
                             <input type="checkbox" onclick="password()">Show Password<br><br>
-                            <input type="submit" value="SignUp" name="submit"> <br>
+                            <input type="submit" value="SignUp" name="submit"> <br> <br>
                     </form>
                 </div>
             </section> <br>

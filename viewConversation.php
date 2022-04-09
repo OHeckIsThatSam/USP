@@ -49,6 +49,7 @@ $conversation = findConversationById($_REQUEST['id']);
                         <li><a href="searchPeople.php">Find People</a></li>
                         <li><a href="conversations.php">Conversations</a></li>
                         <li><a href="viewProfile.php">Profile</a></li>
+                        <li><a href="index.php">LogOut</a></li>
                         <?php
                         $out = "";
                         if(!isset($sessionUser)) {

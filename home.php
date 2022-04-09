@@ -21,7 +21,7 @@ $sessionUser = $_SESSION['user'];
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="shortcut icon" href="images/logoBlack.png" type="image/x-icon" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/> -->
     <body>
     <div id="pageContainer">
         <div class="container">
@@ -51,10 +51,10 @@ $sessionUser = $_SESSION['user'];
                         ?>
                     </ul>
                 </nav>
-                <div class="icoonss">
-                <!-- <i class="fa fa-comments-o" style="font-size:35px"></i>
+                <div class="ic">
+                <a href="conversations.php"><i class='fa fa-comments-o' style="font-size:35px"></i></a>
                 <i class="fa fa-user-circle" style="font-size:35px"></i>
-                <i class="fa fa-user-times" style="font-size:35px"></i> -->
+                <i class="fa fa-user-times" style="font-size:35px"></i>
                 </div>
             </header>
         </div>

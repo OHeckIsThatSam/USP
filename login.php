@@ -20,14 +20,14 @@
                 </a>
                 </div> <br>
                 <nav>
-                    <ul>
-                        <!-- <li><a href="home.php">Home</a></li>
+                    <!-- <ul>
+                        <li><a href="home.php">Home</a></li>
                         <li><a href="searchPeople.php">Find People</a></li>
                         <li><a href="conversations.php">Conversations</a></li>
                         <li><a href="viewProfile.php">Profile</a></li>
                         <li><a href="adminDashboard.php">Admin Dashboard</a></li>
-                        <li><a href="login.php">Login</a></li> -->
-                    </ul>
+                        <li><a href="login.php">Login</a></li>
+                    </ul> -->
                 </nav>
                 <div class="ic">
                 <i class="fa fa-comments-o" style="font-size:35px"></i>
@@ -46,12 +46,12 @@
                         <label for="password">Password:</label><br>
                         <input name="password" type="password" class="input"><br> <br> 
                         <input type="submit" value="Login" name="submit">
-                    </form> <br>
+                    </form> <br> <br>
                     <a href="signUp.php">Not got an account? Click here to sign up.</a>
                 <div> <br> <br> <br>
                 
             </section>
-        </div>
+        </div> <br> <br><br><br><br>
     
         <footer>
             <div>

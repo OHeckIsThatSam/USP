@@ -35,7 +35,7 @@ require_once 'include/database.php'
                     </ul>
                 </nav>
                 <div class="ic">
-                <i class="fa fa-comments-o" style="font-size:35px"></i>
+                <a href="conversations.php"><i class="fa fa-comments-o" style="font-size:35px"></i></a>
                 <i class="fa fa-user-circle" style="font-size:35px"></i>
                 <i class="fa fa-user-times" style="font-size:35px"></i>
                 </div>

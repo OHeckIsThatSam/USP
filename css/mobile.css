@@ -23,6 +23,9 @@ img {
   width: 25%;
   padding: 5px;
 }
+.loggit{
+  display: none;
+}
 nav ul li {
   border: none;
   font-weight: bold;
@@ -111,7 +114,7 @@ input[name="secondEmail"] {
 }
 .ic {
   position: relative;
-  top: -220px;
+  top: -250px;
   margin-left: 220px;
   padding-right: 10px;
 }

@@ -24,7 +24,7 @@
             </header>
         </div>
         <h1 style="text-align:left">Mentor Signup</h1>
-        <p>Want to be a mentor... Please fill in this form!</p>
+        <h2>Want to be a mentor... Please fill in this form!</h2>
     <div class="mentor-quest1">
         <p>What Industry you have experience in?</p>
         <textarea name="" id="" cols="30" rows="5"></textarea>

@@ -82,6 +82,15 @@ input[type="text"] {
   text-align: center;
 }
 /*----------------- sign up page --------------------*/
+input[name="password"]{
+  width: 100%;
+  outline: none;
+  font-size: 15px;
+  border: 1px solid #a8a8a8;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  height: 25px;
+}
 input[name="email"],
 input[name="secondEmail"] {
   width: 100%;

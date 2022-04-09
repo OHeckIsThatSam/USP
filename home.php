@@ -21,6 +21,7 @@ $sessionUser = $_SESSION['user'];
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="shortcut icon" href="images/logoBlack.png" type="image/x-icon" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <body>
     <div id="pageContainer">
         <div class="container">
@@ -50,10 +51,10 @@ $sessionUser = $_SESSION['user'];
                         ?>
                     </ul>
                 </nav>
-                <div class="ic">
-                <i class="fa fa-comments-o" style="font-size:35px"></i>
+                <div class="icoonss">
+                <!-- <i class="fa fa-comments-o" style="font-size:35px"></i>
                 <i class="fa fa-user-circle" style="font-size:35px"></i>
-                <i class="fa fa-user-times" style="font-size:35px"></i>
+                <i class="fa fa-user-times" style="font-size:35px"></i> -->
                 </div>
             </header>
         </div>
@@ -62,14 +63,49 @@ $sessionUser = $_SESSION['user'];
                 <h1>Home</h1>
             </section>
         </div>
-        <div class="post-input-container">
+        <!-- <div class="post-input-container">
                         <textarea class="textho" rows="3" placeholder="What's your thoughts?"></textarea>
                         <form action="/action_page.php">
                             <input type="file" id="myFile" name="filename">
                             <button class="submitted">Submit</button>
                         </form> 
+            </div> -->
+            <div class="Post-Box">
+                <div class="wrapper">
+                    <section class="post">
+                        <h1 class="Create-post">Create Post</h1>
+                        <form action="#">
+                            <div class="contenntt">
+                                <img class="user-icon" src="images/profilepicture.jpg" alt="Profile">
+                                <div class="details">
+                                    <p>Asad Imtiaz</p>
+                                <div class="privacy">
+                                <i class='fas fa-user-friends'></i>
+                                    <span>Friends</span>
+                                    <i class="fa fa-caret-down"></i>
+                                </div>
+                                </div>
+                            </div>
+                            <textarea  placeholder="What's your thoughts" required ></textarea>
+                            <div class="theme-emoji">
+                                <img src="images/theme-svgrepo-com.svg" alt="" style="width: 25px;" >
+                                <img src="images/smiley-svgrepo-com.svg" alt=""  style="width: 25px;">
+                            </div>
+                            <div class="options">
+                                <p>Add to your post</p>
+                                <ul class="list">
+                                    <li><img src="images/gallery-svgrepo-com.svg" alt="" style="width: 25px;"></li>
+                                    <li><img src="images/tag-svgrepo-com.svg" alt="" style="width: 25px;"></li>
+                                    <li><img src="images/wink-emoji-svgrepo-com.svg" alt="" style="width: 25px;"></li>
+                                    <li><img src="images/more-svgrepo-com.svg" alt="" style="width: 25px;"></li>
+                                </ul>
+                            </div>
+                            <button>Post</button>
+                        </form>
+                    </section>
+                </div>
             </div>
-            <br> <br> <br><br><br><br><br><br><br><br>
+            <br> <br> <br>
         <footer>
             <div>
                 <a href="#">Contact/Find Us</a>

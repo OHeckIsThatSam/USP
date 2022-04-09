@@ -23,9 +23,6 @@ img {
   width: 25%;
   padding: 5px;
 }
-.loggit{
-  display: none;
-}
 nav ul li {
   border: none;
   font-weight: bold;
@@ -125,6 +122,9 @@ input[name="secondEmail"] {
 .fa-comments-o {
   color: #000000;
   padding-right: 10px;
+}
+.fa-user-times{
+  color: #000000;
 }
 .configure{
   top: 15px;

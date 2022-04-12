@@ -109,6 +109,12 @@ input[name="secondEmail"] {
   margin-right: auto;
   margin-bottom: 15px;
 }
+.icooonss{
+  position: relative;
+  top: -330px;
+  margin-left: 220px;
+  padding-right: 10px;
+}
 .ic {
   position: relative;
   top: -250px;
@@ -180,6 +186,13 @@ label{
   position: absolute;
   left: 40%;
   top: 75%;
+}
+.Mentor-SUb{
+  display: inline-block;
+  font-size: 25px;
+  position: absolute;
+  left: 40%;
+  top: 107%;
 }
 /*-------------------- home page----------- */
 .post-input-container {

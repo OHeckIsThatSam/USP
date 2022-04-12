@@ -8,7 +8,7 @@ require_once 'include/database.php'
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>USP : Become Mentor</title>
-    <link rel="stylesheet" href="css/mobile.css">
+    <link rel="stylesheet" href="css/mobile.css"> 
     <link rel="stylesheet" media="only screen and (min-width:720px)" href="css/desktop.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="shortcut icon" href="images/logoBlack.png" type="image/x-icon" />
@@ -34,10 +34,10 @@ require_once 'include/database.php'
                         <li><a href="index.php">LogOut</a></li>
                     </ul>
                 </nav>
-                <div class="ic">
+                <div class="icooonss">
                     <a href="conversations.php"><i class='fa fa-comments-o' style="font-size:35px"></i></a>
                     <a href="editProfile.php"><i class="fa fa-user-circle" style="font-size:35px"></i></a>
-                    <a href="mentor.php"><i class="fa fa-user-times" style="font-size:35px"></i></a>
+                    <a href="becomeMentor.php"><i class="fa fa-user-times" style="font-size:35px"></i></a>
                 </div>
             </header>
         </div>
@@ -45,7 +45,24 @@ require_once 'include/database.php'
             <section>
                 <h1>Become A Mentor</h1>
             </section>
-        </div>
+        </div> 
+        <h2>Want to be a mentor... Please fill in this form!</h2>
+    <div class="mentor-quest1">
+        <p>What Industry you have experience in?</p>
+        <textarea name="" id="" cols="30" rows="5"></textarea>
+    </div>
+    <div class="mentor-quest2">
+        <p>Why do you want to be a mentor?</p>
+        <textarea name="" id="" cols="30" rows="5"></textarea>
+    </div>
+    <div class="proof">
+        <p class="Text-here">Please upload proof of your relevant experience here</p>
+        <form action="/action_page.php">
+        <input type="file" id="myFile" name="filename">
+        <!-- <input type="submit"> -->
+        </form>
+    </div> <br> <br> <br> <br>
+    <button class="Mentor-SUb">submit</button> <br>
 
         <footer>
             <div>

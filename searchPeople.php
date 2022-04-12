@@ -59,7 +59,7 @@ if(isset($_POST['search'])) {
                 <div class="ic">
                         <a href="conversations.php"><i class='fa fa-comments-o' style="font-size:35px"></i></a>
                         <a href="editProfile.php"><i class="fa fa-user-circle" style="font-size:35px"></i></a>
-                        <a href="mentor.php"><i class="fa fa-user-times" style="font-size:35px"></i></a>
+                        <a href="becomeMentor.php"><i class="fa fa-user-times" style="font-size:35px"></i></a>
                 </div>
             </header>
         </div>

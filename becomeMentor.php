@@ -62,8 +62,8 @@ require_once 'include/database.php'
         <!-- <input type="submit"> -->
         </form>
     </div> <br> <br> <br> <br>
-    <button class="Mentor-SUb">submit</button> <br>
-
+    <a href="home.php"><button class="Mentor-SUb">submit</button></a> 
+        <br> <br>
         <footer>
             <div>
                 <a href="#">Contact/Find Us</a>

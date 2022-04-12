@@ -29,8 +29,6 @@ require_once 'include/database.php'
                         <li><a href="searchPeople.php">Find People</a></li>
                         <li><a href="conversations.php">Conversations</a></li>
                         <li><a href="viewProfile.php">Profile</a></li>
-                        <li><a href="adminDashboard.php">Admin Dashboard</a></li>
-                        <li><a href="login.php">Login</a></li>
                         <li><a href="index.php">LogOut</a></li>
                     </ul>
                 </nav>
